@@ -107,36 +107,121 @@ dict={
 
         }, 
          page8:{
-            "":"",
+            "bakke":"hill",
+            'meget høj':'very high',
+            'meget høj bakke':'very high hill',
+            'kedelig':'boring',
+            "skøn":"wonderful",
+            'udsigt':'view',
+            'skøn udsigt':'wonderful view',
+            'kort':'map',
+            'er du sikker':'are you sure',
+            "kjole":"dress",
+            'min tur':'my turn',
+            'himlen':'the sky',
+            'ved du':'do you know',
+            'hvor vi er':'where we are',
+            'hele dagen':'all day',
+            'fare lidt vild':'get a little lost',
+            'knotten':'irritated',
+            'se':'look',
+            'indenfor':'inside',
+            '':'',   
             '':'',
-            '':'',
-            '':'',
-            "":"",
-            '':'',
-            '':'',
-            '':'',
-            "":"",
-            '':'',
-            '':'',
-            '':'',
+
+        },
+        page9:{
+            
+            'søvnig':'sleepy',   
+            'øverste knap':'top button',
+            'øverste etage':'top floor',   
+            'store tal':'big numbers',
+            'alvorlig':'serious',   
+            'løber tør':'run out',
+            'reddede os':'saved us',   
+            'spændende':'exciting',
+            'luft':'air',    
+            'dækket':'the tire',
+            'fremtiden':'the future',   
+            'gør noget':'do something',
+             'måske':'maybe',   
+            'skulle jeg ':'I should',
+             'prøve':'try',   
+            'reparere computer':'fix computer'
+
+
 
         }
 
     },
     chapter2:{
         page1:{
-            folk:'people',
-            skal:'should',
-            flere:'more',
-            tiden:'the time',
-            rejse:'travel',
-            døde:'dead',
-            om:'about'
+            'småkager':'cookies',   
+            'lyd':'sound',
+            'mærkelig lyd':'strange sound',   
+            'inde i huset':'inside house',
+            'torden':'thunder',   
+            'langt væk':'far away',
+            'mørkere':'darker',   
+            'det bliver':'it will be',
+            'glemt':'forgotten',   
+            'i haven':'in the garden',
+            'snart':'soon',   
+            'hvad sag jeg':'what did i say',
         },
         page2:{
             'det sker':'it happens',
             'med':'with',
-            'en smule':'a bit'
+            'en smule':'a bit',
+            'stakkels dreng':'poor boy',   
+            'stakkels lille ting':'poor little thing',
+            'lå i sengen':'lay in bed',  
+            'modig':'brave',
+            'store og modige':'big and brave',   
+            'selvfølgelig':'ofcourse',
+            'umulig':'impossible',
+            'det er stille':'it is quiet',
+            'det er så stille':'it is so quiet',   
+            'han er bedre':'he is better',   
+           
+
+
+        },
+        page3:{
+        	//Gurli Gris 4 - 35 Natdyr
+            'sengetid':'bedtime',
+            'bare rolig':'dont worry',
+            'samle':'collect',
+            'grøntsager':'vegetables',
+            'lommelygte':'flashlight',
+            'Vær venlig':'please',
+            'i spanden':'in the bucket',
+            'pind':'stick',
+            'pindsvin':'hedgehog',
+            'Vær bange':'be scared',
+            'sommerfugle':'butterflies',
+            'ildflue':'firefly',
+            'op i himlen':'up in the sky',
+            'stjerneskud':'shooting star',
+            'ildsted':'fireplace',
+            'mave':'tummy',
+            
+
+
+        },
+        page4:{
+            'op i himlen':'',
+            '':'',
+            '':'',
+            '':'',
+            '':'',
+            '':'',
+            '':'',
+            '':'',
+            '':'',
+            '':'',
+            '':'',
+            '':'',
 
 
         },
