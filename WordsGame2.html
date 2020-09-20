@@ -50,8 +50,8 @@
 		ohNo.volume=0.5;
 		win.volume=0.5;
 
-		var ChapterNr = 1;
-		var DictPage = 1;
+		var ChapterNr = 2;
+		var DictPage = 5;
 		
 
 		var myCanvas = document.getElementById('myCanvas').getContext('2d');
@@ -63,6 +63,7 @@
 		var HEIGHT = 600;
 		var intervalVar,score;
 		var maxWordInDict=0;
+		TryAgainScreen = false; 
 		
 		var levDone= [false,0,0,0,0,0,0,0,0,0];
 		//var levDone= [false,1,1,2,0,1,0,1,0,0];
@@ -95,7 +96,7 @@
 		myCanvas.fillText('press 1,2,3...9  to change pages',160, 450);
 
 		myCanvas.font = "18px Calibri";
-		myCanvas.fillText(('current page is:'+DictPage),160, 550);
+		myCanvas.fillText(('current page is: '+DictPage),160, 550);
 
 		myCanvas.restore();
 
@@ -157,7 +158,7 @@
 			if ((gameStarted==false)&&(event.keyCode ==187)) {ChapterNr++;drawRects();drawHomeRect(ChapterNr);};
 			if ((gameStarted==false)&&(event.keyCode ==189)) {ChapterNr--;drawRects();drawHomeRect(ChapterNr);};
 				
-			if ((gameStarted==false)&&(event.keyCode ==13)){
+			if ((gameStarted==false)&&(event.keyCode ==13)){ //enter
 				document.getElementById("myInput").value='';
 				startGame();
 			
@@ -165,10 +166,11 @@
 			}else if (event.keyCode ==13){//enter
 				getInputValue();
 			};
-			if ((gameStarted==true)&&(event.keyCode ==27)){
+			if ((gameStarted==true)&&(event.keyCode ==27)){ //Esc
 				tryAgain();
 				gameReset();
 			}
+			if ((TryAgainScreen==true)&&(event.keyCode ==89)) {GoToYoutube();}//Y
 			
 		}
 		function changePage(page){
@@ -345,6 +347,8 @@
 					clearInterval(intervalVar);// this stops programm
 		}
 		youWon = function(){
+					TryAgainScreen=true; 
+					gameStarted=false;
 					myCanvas.save();
 					levDone[DictPage]=2;
 					drawCoin();
@@ -359,16 +363,20 @@
 
 		}
 		tryAgain =function(){
+			TryAgainScreen=true; 
+			gameStarted=false;
 			//location.assign("https://www.w3schools.com");
 			//if (confirm("Page will be redirected")){	location.assign("https://www.w3schools.com");}	  
 					//location.assign("https://www.w3schools.com");// not work
 					//window.location.href = "http://www.w3schools.com";
-					window.location = "http://www.example.com"; //works
+					//window.location = "http://www.example.com"; //works
+					//window.location = "https://www.youtube.com/watch?v=a58Phhm8kuI&ab_channel=B%C3%B8rneTV"; 
 				
 					myCanvas.save();
 					myCanvas.fillStyle = 'Orange';
 					myCanvas.font = "24px Calibri";
 					myCanvas.fillText(score +' out of '+DanNum,140, 150);
+					
 					if (score >= (DanNum-2)){
 						win.play();
 						levDone[DictPage]=1;
@@ -379,12 +387,25 @@
 					myCanvas.fillText('Not perfect, press Enter to try again',100, 250);
 					myCanvas.fillText('Press 1, 2 or 3 to change Page of Dictionary', 100, 350);
 					myCanvas.fillText('Current Page:'+DictPage,140, 450);
+					myCanvas.fillText('Press Y to wach a cartoon', 100, 550);//will fire GoToYoutube function
 					myCanvas.restore();
 		}
+		GoToYoutube = function(){
+
+			window.alert("Page="+DictPage+"   "+"Chapter="+ChapterNr);
+			window.location = "https://www.youtube.com/watch?v=a58Phhm8kuI&ab_channel=B%C3%B8rneTV"; 
+		if ((ChapterNr==2)&&(DictPage==3))
+			{window.location = "https://www.youtube.com/watch?v=ACGNuROv4p0&ab_channel=PeterMains";} 
+		if ((ChapterNr==2)&&(DictPage==1))
+			{window.location = "https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV";} 
+			
+		}
+		/*
 		redirectF = function(){
 			console.log("redirectF");
 			location.assign("https://www.w3schools.com");
 		}
+		*/
 		drawCoin = function(){
 			
 
@@ -457,6 +478,7 @@
 		startGame = function(){
 			setCurrentWord();
 			gameStarted=true;
+			TryAgainScreen=false;
 			score =0;wordY=0;
 			
 			intervalVar = setInterval(gameLoop,1000/framesPerSecond);//30 frames

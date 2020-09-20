@@ -156,7 +156,9 @@ dict={
     },
     chapter2:{
         page1:{
-            'småkager':'cookies',   
+            //https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV
+            //Gurli Gris 1 - 32 Tordenvejret
+             'småkager':'cookies',   
             'lyd':'sound',
             'mærkelig lyd':'strange sound',   
             'inde i huset':'inside house',
@@ -221,6 +223,12 @@ dict={
             '':'',
             '':'',
             '':'',
+            '':'',
+
+
+        },
+        page5:{
+            'op i himlen':'up in the sky',
             '':'',
 
 
