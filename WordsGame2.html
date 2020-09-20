@@ -21,13 +21,19 @@
 			
 				<br>
 			<div width="600">
-					<input type="text" placeholder="Type something..." id="myInput" style="
+					<input type="text" placeholder="Type translation..." id="myInput" style="
 					text-align: center;
 					margin-left:14px; font-weight: bold;width: 400px; font-size: 22px;
 					position: relative;
-				    top: -10px;" autofocus>
+					top: -10px;" autofocus>
+					
 		    		<!--<button type="button" onclick="getInputValue();">Get Value </button>  -->
 			</div>
+			
+			
+			<form action="https://www.youtube.com/watch?v=T0MwtvJjHfM&t=1s" id="YTbutton">
+				<input type="submit" value="Go to Youtube" />
+			</form>
 		</div>
 	</div>
 
@@ -63,6 +69,7 @@
 		
 
 		//Start screen
+		/*
 		myCanvas.font = "48px Calibri";
 		myCanvas.fillText('Danish tutor',140, 200);
 		
@@ -71,7 +78,28 @@
 		
 		myCanvas.font = "24px Calibri";
 		myCanvas.fillText('press Enter to start',160, 300);
+		*/
+		//---------------------------------Start Screen--------------------//
+
+		myCanvas.font = "48px Calibri";
+		myCanvas.fillText('Danish tutor',140, 200);
 		
+		myCanvas.font = "24px Calibri";
+		myCanvas.fillText('press Enter to start',160, 300);
+		myCanvas.save();
+
+		myCanvas.font = "18px Calibri";
+		myCanvas.fillText('press + or -  to change chapters',160, 400);
+
+		myCanvas.font = "18px Calibri";
+		myCanvas.fillText('press 1,2,3...9  to change pages',160, 450);
+
+		myCanvas.font = "18px Calibri";
+		myCanvas.fillText(('current page is:'+DictPage),160, 550);
+
+		myCanvas.restore();
+
+		//---------------------------------------------------------------------//
 		
 
 		var gameStarted = false;
@@ -331,6 +359,12 @@
 
 		}
 		tryAgain =function(){
+			//location.assign("https://www.w3schools.com");
+			//if (confirm("Page will be redirected")){	location.assign("https://www.w3schools.com");}	  
+					//location.assign("https://www.w3schools.com");// not work
+					//window.location.href = "http://www.w3schools.com";
+					window.location = "http://www.example.com"; //works
+				
 					myCanvas.save();
 					myCanvas.fillStyle = 'Orange';
 					myCanvas.font = "24px Calibri";
@@ -346,6 +380,10 @@
 					myCanvas.fillText('Press 1, 2 or 3 to change Page of Dictionary', 100, 350);
 					myCanvas.fillText('Current Page:'+DictPage,140, 450);
 					myCanvas.restore();
+		}
+		redirectF = function(){
+			console.log("redirectF");
+			location.assign("https://www.w3schools.com");
 		}
 		drawCoin = function(){
 			
