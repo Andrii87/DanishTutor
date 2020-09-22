@@ -31,9 +31,6 @@
 			</div>
 			
 			
-			<form action="https://www.youtube.com/watch?v=T0MwtvJjHfM&t=1s" id="YTbutton">
-				<input type="submit" value="Go to Youtube" />
-			</form>
 		</div>
 	</div>
 
@@ -393,12 +390,15 @@
 		GoToYoutube = function(){
 
 			window.alert("Page="+DictPage+"   "+"Chapter="+ChapterNr);
-			window.location = "https://www.youtube.com/watch?v=a58Phhm8kuI&ab_channel=B%C3%B8rneTV"; 
-		if ((ChapterNr==2)&&(DictPage==3))
-			{window.location = "https://www.youtube.com/watch?v=ACGNuROv4p0&ab_channel=PeterMains";} 
-		if ((ChapterNr==2)&&(DictPage==1))
-			{window.location = "https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV";} 
+				window.location = "https://www.youtube.com/watch?v=a58Phhm8kuI&ab_channel=B%C3%B8rneTV"; 
 			
+			if ((ChapterNr==2)&&(DictPage==1))
+				{window.location = "https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV";} 
+			if ((ChapterNr==2)&&(DictPage==3))
+				{window.location = "https://www.youtube.com/watch?v=ACGNuROv4p0&ab_channel=PeterMains";} 
+			if ((ChapterNr==2)&&(DictPage==5))
+				{window.location = "https://youtu.be/HtkHSWG9Ti0";} 
+				
 		}
 		/*
 		redirectF = function(){

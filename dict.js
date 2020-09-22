@@ -214,23 +214,42 @@ dict={
         page4:{
             'op i himlen':'',
             '':'',
-            '':'',
-            '':'',
-            '':'',
-            '':'',
-            '':'',
-            '':'',
-            '':'',
-            '':'',
-            '':'',
-            '':'',
+            
 
 
         },
         page5:{
-            'op i himlen':'up in the sky',
-            '':'',
+            //Gurli Gris 1 - 22 Tandfeen
+            //https://youtu.be/HtkHSWG9Ti0
+            'tand':'tooth',
+            'yndlingsret':'favorite dish',
+            'larme':'make noise',
+            'Hvad er det':'What is it',
+            'skulle du se':'you should see',
+            'spejl':'mirror',
+            'det er min':'it is my',
+            'det faldt ud':'it fell out',
+            'mælketand':'milk tooth',
+            'det skal fell ud':'it should fall out',
+            'mynt':'coin',
+            'børste tænder':'brush teeth',
 
+        },
+         page6:{
+            //Gurli Gris 1 - 22 Tandfeen
+            //https://youtu.be/HtkHSWG9Ti0?t=86
+            'under puden':'under pillow',
+            '':'',
+            ' ':' ',
+            '':'',
+            '':'',
+            ' ':' ',
+            '':'',
+            '':'',
+            ' ':' ',
+            '':'',
+            '':'',
+            ' ':' ',
 
         },
     }
