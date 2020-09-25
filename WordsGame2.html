@@ -47,7 +47,7 @@
 		ohNo.volume=0.5;
 		win.volume=0.5;
 
-		var ChapterNr = 2;
+		var ChapterNr = 1;
 		var DictPage = 5;
 		
 
@@ -390,14 +390,24 @@
 		GoToYoutube = function(){
 
 			window.alert("Page="+DictPage+"   "+"Chapter="+ChapterNr);
-				window.location = "https://www.youtube.com/watch?v=a58Phhm8kuI&ab_channel=B%C3%B8rneTV"; 
-			
+				//window.location = "https://www.youtube.com/watch?v=a58Phhm8kuI&ab_channel=B%C3%B8rneTV"; 
+			if ((ChapterNr==1)&&(DictPage==2))
+				{window.location = "https://youtu.be/nhb89cifxW8?t=16";} 
+			if ((ChapterNr==1)&&(DictPage==3))
+				{window.location = "https://youtu.be/a58Phhm8kuI";} 
+			if ((ChapterNr==1)&&(DictPage==6))
+				{window.location = "https://youtu.be/zgKECHrWpU4";} 
+			//if ((ChapterNr==1)&&(DictPage==6))
+			//	{window.location = "https://youtu.be/zgKECHrWpU4";} 
+			if ((ChapterNr==1)&&(DictPage==9))
+				{window.location = "https://youtu.be/iolFBh6OrTA?t=17";} 
 			if ((ChapterNr==2)&&(DictPage==1))
 				{window.location = "https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV";} 
 			if ((ChapterNr==2)&&(DictPage==3))
 				{window.location = "https://www.youtube.com/watch?v=ACGNuROv4p0&ab_channel=PeterMains";} 
 			if ((ChapterNr==2)&&(DictPage==5))
 				{window.location = "https://youtu.be/HtkHSWG9Ti0";} 
+				else{window.alert("no youtube video for this page");}
 				
 		}
 		/*

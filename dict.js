@@ -13,6 +13,9 @@ dict={
             "snart":"soon",
         },
         page2:{
+            //https://youtu.be/nhb89cifxW8?t=16
+            //Gurli Gris | Skattejagten
+            
             'det var flot':'it was great',
             'dernede':'down there',
             'skatten':'treasure',
@@ -26,6 +29,8 @@ dict={
 
         },
         page3:{
+            //https://youtu.be/a58Phhm8kuI
+            //Gurli Gris 1 - 33 Bilvask
             'faret vild':'got lost',
             'snavset':'dirty',
             'ikke såslemt':'not so bad',
@@ -57,6 +62,7 @@ dict={
         },
 
         page5:{
+           
             'huske':'remember',
             'halstørklæde':'scarf',
             'hue':'hat',
@@ -74,6 +80,8 @@ dict={
 
         }, 
          page6:{
+            //gurli gris s02e20 - dansk tale  svomning
+            //https://youtu.be/zgKECHrWpU4
             "spark":"kick",
             'spark med benene':'kick with legs',
             'lade være med':'stop it',
@@ -86,9 +94,12 @@ dict={
             'venstre':'left',
             'højre':'right',
             'desværre':'unfortunately',
+            'på samme tid':'at the same time',
 
         }, 
          page7:{
+             //https://youtu.be/Gsggd7RT7O0
+             //Gurli Gris | Cykler 
             "kedelig":"boring",
             'vigtig':'important',
             'aflevere':'deliver',
@@ -131,12 +142,16 @@ dict={
 
         },
         page9:{
+            //https://youtu.be/iolFBh6OrTA?t=17
+            //Gurli Gris 2 - 22 På Arbejde Med Far Gris
             
             'søvnig':'sleepy',   
             'øverste knap':'top button',
             'øverste etage':'top floor',   
             'store tal':'big numbers',
             'alvorlig':'serious',   
+            'vigtig':'important',
+            'tegne':'draw',
             'løber tør':'run out',
             'reddede os':'saved us',   
             'spændende':'exciting',
@@ -238,6 +253,7 @@ dict={
          page6:{
             //Gurli Gris 1 - 22 Tandfeen
             //https://youtu.be/HtkHSWG9Ti0?t=86
+            //https://youtu.be/lJnADJxyr54  //eng
             'under puden':'under pillow',
             '':'',
             ' ':' ',
