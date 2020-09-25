@@ -41,7 +41,15 @@ dict={
             'ryd op!':'tidy up!',
             'hente nogle':'get some',
             'svampen':'sponge',
-            
+            //----------------------------------//
+            'er du klar':'are you ready',
+            'vaske':'wash',
+            'han er for lille':'he is too small',
+            'stakkels dreng':'poor boy',
+            'undskyld':'sorry',
+            '':'',
+            '':'',
+            '':'',
         
         },
         page4:{
@@ -256,16 +264,16 @@ dict={
             //https://youtu.be/lJnADJxyr54  //eng
             'under puden':'under pillow',
             '':'',
-            ' ':' ',
             '':'',
             '':'',
-            ' ':' ',
             '':'',
             '':'',
-            ' ':' ',
             '':'',
             '':'',
-            ' ':' ',
+            '':'',
+            '':'',
+            '':'',
+            '':'',
 
         },
     }
