@@ -47,8 +47,8 @@
 		ohNo.volume=0.5;
 		win.volume=0.5;
 
-		var ChapterNr = 1;
-		var DictPage = 5;
+		var ChapterNr = 3;
+		var DictPage = 1;
 		
 
 		var myCanvas = document.getElementById('myCanvas').getContext('2d');
@@ -119,8 +119,10 @@
 		
 		var Danish4 =["afskyeligt" ,"rask"   ,"Jeg ringer","prikker","ansigt","pilene","slet ikke","det blæser"  ,"vær forsigtig"   ,"tung","reddet","solskinsdag"   ,"regndag" ,"rutsjebane"    ,"stadig"  ,"flyve","vind","vente"];
 		var English4 =["disgusting","healthy","I am calling","dots"	   ,"face"  ,"arrows","not at all","it blows","be careful"    ,"heavy","saved","sunny day"  ,"rainy day","rollercoaster","still","fly"   ,"wind","wait"];
+		
 		var Danish5 =["forsamlinger","selskabet ","ville ikke","frivilligt","halve antal"  ,"antal passagerne"	,"anbefalingerne","to meters","afstand","undgå ","tæt  ","kontakt  ","at forhindre"," smitte"];
 		var English5 =["gatherings","the company","would not","voluntary","half the number","number of passengers","recommendations","two meters","away","avoid","close","contact","to prevent","infection"];
+		
 		var Danish6 =["prøv igen","sjovt","endelig","beskytter","vente","udtaler"	  ,""];
 		var English6 =["try again","fun","finally","protects"  ,"wait","pronunciation",""];
 
@@ -393,20 +395,22 @@
 				//window.location = "https://www.youtube.com/watch?v=a58Phhm8kuI&ab_channel=B%C3%B8rneTV"; 
 			if ((ChapterNr==1)&&(DictPage==2))
 				{window.location = "https://youtu.be/nhb89cifxW8?t=16";} 
-			if ((ChapterNr==1)&&(DictPage==3))
+			else if ((ChapterNr==1)&&(DictPage==3))
 				{window.location = "https://youtu.be/a58Phhm8kuI";} 
-			if ((ChapterNr==1)&&(DictPage==6))
+			else if ((ChapterNr==1)&&(DictPage==6))
 				{window.location = "https://youtu.be/zgKECHrWpU4";} 
 			//if ((ChapterNr==1)&&(DictPage==6))
 			//	{window.location = "https://youtu.be/zgKECHrWpU4";} 
-			if ((ChapterNr==1)&&(DictPage==9))
+			else if ((ChapterNr==1)&&(DictPage==9))
 				{window.location = "https://youtu.be/iolFBh6OrTA?t=17";} 
-			if ((ChapterNr==2)&&(DictPage==1))
+			else if ((ChapterNr==2)&&(DictPage==1))
 				{window.location = "https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV";} 
-			if ((ChapterNr==2)&&(DictPage==3))
+			else if ((ChapterNr==2)&&(DictPage==3))
 				{window.location = "https://www.youtube.com/watch?v=ACGNuROv4p0&ab_channel=PeterMains";} 
-			if ((ChapterNr==2)&&(DictPage==5))
+			else if ((ChapterNr==2)&&(DictPage==5))
 				{window.location = "https://youtu.be/HtkHSWG9Ti0";} 
+			else if ((ChapterNr==3)&&(DictPage==1))
+				{window.location = "https://youtu.be/dvavLd3Xq5Y";} 
 				else{window.alert("no youtube video for this page");}
 				
 		}

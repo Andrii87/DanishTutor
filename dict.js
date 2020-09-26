@@ -276,5 +276,62 @@ dict={
             '':'',
 
         },
+    },
+    chapter3:{
+        page1:{
+            //Peppa Pig - Lunch (full episode)
+            //https://youtu.be/Ez0qR3m1G4g
+            //Gurli Gris 1 - 34 Frokost
+            //https://youtu.be/dvavLd3Xq5Y
+            'frokost':'lunch',
+            'have':'garden',
+            'lad os finde':"let's find",
+            'hente nogle':'pick up some',
+            'kan du li':'do you like',
+            'agurk':'cucumber',
+            'skør':'crazy',
+            'dejlig':'lovely',
+            'nok':'enough',
+            'lave':'make',
+            'lav salat':'make salad',
+            'prøve':'try',
+            'lækker':'delicious',
+            'spise':'eat',
+            'jeg er mæt':'i am full',
+            'det er trist':"that's sad",
+            'slet ikke':'not at all',
+        },
+        page2:{
+
+        },
+        page3:{
+            
+
+
+        },
+        page4:{
+            
+
+
+        },
+        page5:{
+            
+
+        },
+         page6:{
+            
+            '':'',
+            '':'',
+            '':'',
+            '':'',
+            '':'',
+            '':'',
+            '':'',
+            '':'',
+            '':'',
+            '':'',
+            '':'',
+
+        },
     }
 }
