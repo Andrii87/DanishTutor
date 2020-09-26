@@ -17,7 +17,9 @@
 		    background-color: gray;"> 
 			<canvas height="600" width="600" id="myCanvas" style="border:3px solid black;
 			    top: 5px;
-			    position: relative;"></canvas>
+				position: relative;"></canvas>
+				
+				
 			
 				<br>
 			<div width="600">
@@ -37,6 +39,28 @@
 	<!--   <script src="mydictionary.js"></script>  -->
 	<script src="dict.js"></script> -->
 	<script type="text/javascript">
+
+//------------------------------------------------------------------------------------//
+		// Work-around chromium autoplay policy
+      // https://github.com/emscripten-core/emscripten/issues/6511
+      function resumeAudio(e) {
+	  if (typeof Module === 'undefined'
+	      || typeof Module.SDL2 == 'undefined'
+	      || typeof Module.SDL2.audioContext == 'undefined')
+	      return;
+	  if (Module.SDL2.audioContext.state == 'suspended') {
+	      Module.SDL2.audioContext.resume();
+	  }
+	  if (Module.SDL2.audioContext.state == 'running') {
+	      document.getElementById('canmyCanvasvas').removeEventListener('click', resumeAudio);
+	      document.removeEventListener('keydown', resumeAudio);
+	  }
+      }
+      document.getElementById('myCanvas').addEventListener('click', resumeAudio);
+      document.addEventListener('keydown', resumeAudio);
+
+//-------------------------------------------------------------------------------------------//
+
 		var coin = new Audio('../coin.wav');
 		var No = new Audio('../No.wav');
 		var win = new Audio('../winSong.wav');
