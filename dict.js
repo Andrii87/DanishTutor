@@ -318,6 +318,7 @@ dict={
            'hvad er':'what is',
            'det er sted':'it is place',
            
+           'være roligt':'be calm',
            'meget gammel':'very old',
            'konge':'king',
            'konger og dronninger':'kings and queens',
