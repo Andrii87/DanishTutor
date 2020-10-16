@@ -291,6 +291,14 @@ dict={
             'agurk':'cucumber',
             'skør':'crazy',
             'dejlig':'lovely',
+            'skyl grøntsagerne':'rinse the vegetables',
+            
+        },
+        page2:{
+            //Peppa Pig - Lunch (full episode)
+            //https://youtu.be/Ez0qR3m1G4g
+            //Gurli Gris 1 - 34 Frokost
+            //https://youtu.be/dvavLd3Xq5Y
             'nok':'enough',
             'lave':'make',
             'lav salat':'make salad',
@@ -300,12 +308,27 @@ dict={
             'jeg er mæt':'i am full',
             'det er trist':"that's sad",
             'slet ikke':'not at all',
-        },
-        page2:{
 
         },
         page3:{
-            
+           // Gurli Gris 1 - 39 Museet
+           // https://youtu.be/W72JGtCPHTw    //dk
+           //https://youtu.be/1ckFNhI9F5Y     //en
+  
+           'hvad er':'what is',
+           'det er sted':'it is place',
+           
+           'meget gammel':'very old',
+           'konge':'king',
+           'konger og dronninger':'kings and queens',
+           'voksne':'adults',
+           'stol':'chair',
+           'mere kage':'more cake',
+           'kongelig højhed':'royal highness',
+           'meget stor':'very big',
+           'knogle':'bone',
+           'forestiller ':'imagines',
+           'yndling ':'favorite',
 
 
         },
@@ -320,7 +343,7 @@ dict={
         },
          page6:{
             
-            '':'',
+            'hvad er':'',
             '':'',
             '':'',
             '':'',
