@@ -334,6 +334,22 @@ dict={
 
         },
         page4:{
+            //https://youtu.be/QgUjWDX6RgU
+            'nemt  ':'easily',
+            'tilvaerelsen  ':'existence  ',
+            'selv om sommeren':'even in the summer',
+            'overdrive   ':'exaggerate',
+            'unge  ':'young',
+            'muligheder  ':'options',
+            'billigt  ':'cheap',
+            'ungdommen  ':'the youth',
+            'skrive':'write',
+            'hvis  ':'whose',
+            'dovne':'lazy',
+            'fremstilling':'manufacturing',
+            'offentlige':'public ',
+            'tjenester':'services',
+            'landbrug ':'agriculture',
             
 
 

@@ -233,8 +233,10 @@
 
         checkAnswer = function(){
         	let AnswerLow=Answer.toLowerCase();
-        	let ctAnswerLow=currentAnswer.toLowerCase();
-        	return (AnswerLow==ctAnswerLow);
+			let ctAnswerLow=currentAnswer.toLowerCase();
+			let AnswerLowTrimmed=AnswerLow.trim();
+			let ctAnswerLowTrimmed=ctAnswerLow.trim();
+			return (AnswerLowTrimmed==ctAnswerLowTrimmed);
        }
 	   
 	   
@@ -440,6 +442,8 @@
 				{window.location = "https://youtu.be/dvavLd3Xq5Y";} 
 			else if ((ChapterNr==3)&&(DictPage==3))
 				{window.location = "https://youtu.be/W72JGtCPHTw";} 
+			else if ((ChapterNr==3)&&(DictPage==4))
+				{window.location = "https://youtu.be/QgUjWDX6RgU";} 
 				else{window.alert("no youtube video for this page");}
 				
 		}
