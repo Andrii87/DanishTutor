@@ -312,8 +312,8 @@ dict={
         },
         
         page8:{
-            //https://youtu.be/SM_s5cwE4z0
-
+            //https://youtu.be/SM_s5cwE4z0    dat
+            //https://youtu.be/yPsywDWFjOg    eng
             'købe':'buy',
             'elsker at sidde':'loves sitting',
             'Må jeg':'can I',
@@ -325,6 +325,13 @@ dict={
             
             'er vognen':'is the trolley',
             'godt gået':'well done',
+
+
+
+        },page9:{
+            //https://youtu.be/SM_s5cwE4z0    dat
+            //https://youtu.be/yPsywDWFjOg    eng
+           
             'det var flot':' great',
             'jeg kan se den':'I can see it',
             'kan ikke huske':'cannot remember',
