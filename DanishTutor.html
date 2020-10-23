@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Words Game</title>
+	<title>Danish Tutor</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-	<div id=bodydiv style="    
+	<div id="bodydiv" style="    
 		display: flex;
 	    justify-content: center;
-	    ">
-		<div id=canvasdiv style="    
+		">
+			<!--Див, для центвовки игры   -->
+		<div id="canvasdiv" style="    
 			width: 700px;
 			height: 650px;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-		    background-color: gray;"> 
+			background-color: gray;"> 
+			<!--Окаймовка серого цвета, вокруг поля для игры   -->
+			
 			<canvas height="600" width="600" id="myCanvas" style="border:3px solid black;
 			    top: 5px;
 				position: relative;"></canvas>
 				
 				
 			
-				<br>
+				<br>	<!--Поле для происходит движ (канвас)   -->
 			<div width="600">
 					<input type="text" placeholder="Type translation..." id="myInput" style="
 					text-align: center;
@@ -29,15 +33,30 @@
 					position: relative;
 					top: -10px;" autofocus>
 					
-		    		<!--<button type="button" onclick="getInputValue();">Get Value </button>  -->
+		    		<!-- Поле для ввода ответов   -->
 			</div>
 			
 			
+			
 		</div>
+		<!--
+		<div id="YT" style="    
+		width: 700px;
+		height: 650px;
+		position: fixed; ;
+		background:red;
+		display: none;
+		"		>
+			
+													
+		</div>
+		-->
 	</div>
+	
+</div>
 
 	<!--   <script src="mydictionary.js"></script>  -->
-	<script src="dict.js"></script> -->
+	<script src="dict.js"></script> 
 	<script type="text/javascript">
 
 //------------------------------------------------------------------------------------//
@@ -71,7 +90,7 @@
 		ohNo.volume=0.5;
 		win.volume=0.5;
 
-		var ChapterNr = 3;
+		var ChapterNr = 2;
 		var DictPage = 1;
 		
 
@@ -181,8 +200,26 @@
 			if ((gameStarted==false)&&(event.keyCode ==57)) {changePage(9);}
 			//if ((gameStarted==false)&&(event.keyCode ==48)) {changePage(10);}
 
-			if ((gameStarted==false)&&(event.keyCode ==187)) {ChapterNr++;drawRects();drawHomeRect(ChapterNr);};
-			if ((gameStarted==false)&&(event.keyCode ==189)) {ChapterNr--;drawRects();drawHomeRect(ChapterNr);};
+			if ((gameStarted==false)&&(event.keyCode ==187)) {
+							myCanvas.save();
+							myCanvas.fillRect(0,0,WIDTH,HEIGHT);
+							ChapterNr++;drawRects();drawHomeRect(ChapterNr);
+							myCanvas.font = "18px Calibri";
+							myCanvas.fillStyle = 'Orange';
+							myCanvas.fillText(('current chapter is: '+ ChapterNr),160, 580);  
+							myCanvas.restore();
+			};
+		
+			if ((gameStarted==false)&&(event.keyCode ==189)) {
+							myCanvas.save();
+							myCanvas.fillRect(0,0,WIDTH,HEIGHT);
+							ChapterNr--;drawRects();drawHomeRect(ChapterNr);
+							
+							myCanvas.font = "18px Calibri";
+							myCanvas.fillStyle = 'Orange';
+							myCanvas.fillText(('current chapter is: '+ ChapterNr),160, 580);  
+							myCanvas.restore();
+			};
 				
 			if ((gameStarted==false)&&(event.keyCode ==13)){ //enter
 				document.getElementById("myInput").value='';
@@ -196,7 +233,7 @@
 				tryAgain();
 				gameReset();
 			}
-			if ((TryAgainScreen==true)&&(event.keyCode ==89)) {GoToYoutube();}//Y
+			if ((TryAgainScreen==true)&&(event.keyCode ==89)) { GoToYoutube(); }//Y
 			
 		}
 		function changePage(page){
@@ -232,9 +269,9 @@
 		}
 
         checkAnswer = function(){
-        	let AnswerLow=Answer.toLowerCase();
+        	let AnswerLow=Answer.toLowerCase();			//Ignore high or lower case
 			let ctAnswerLow=currentAnswer.toLowerCase();
-			let AnswerLowTrimmed=AnswerLow.trim();
+			let AnswerLowTrimmed=AnswerLow.trim();         //cuts spaces
 			let ctAnswerLowTrimmed=ctAnswerLow.trim();
 			return (AnswerLowTrimmed==ctAnswerLowTrimmed);
        }
@@ -356,7 +393,13 @@
 
 		}
 
-		
+		/*
+		makeYTlink =function(shortLink){
+			https://www.youtube.com/embed/QgUjWDX6RgU?rel=0&amp;autoplay=0&mute=0&loop=1&controls=1&showinfo=0
+			return("https://www.youtube.com/embed/"+shortLink+"?rel=0&amp;autoplay=0&mute=0&loop=1&controls=1&showinfo=0");
+		}
+		*/
+
 		gameOver = function (){
 
 					if (score >= DanNum){
@@ -393,12 +436,8 @@
 		tryAgain =function(){
 			TryAgainScreen=true; 
 			gameStarted=false;
-			//location.assign("https://www.w3schools.com");
-			//if (confirm("Page will be redirected")){	location.assign("https://www.w3schools.com");}	  
-					//location.assign("https://www.w3schools.com");// not work
-					//window.location.href = "http://www.w3schools.com";
 					//window.location = "http://www.example.com"; //works
-					//window.location = "https://www.youtube.com/watch?v=a58Phhm8kuI&ab_channel=B%C3%B8rneTV"; 
+					
 				
 					myCanvas.save();
 					myCanvas.fillStyle = 'Orange';
@@ -418,41 +457,58 @@
 					myCanvas.fillText('Press Y to wach a cartoon', 100, 550);//will fire GoToYoutube function
 					myCanvas.restore();
 		}
+		
 		GoToYoutube = function(){
+			
+			
+			window.alert("Chapter="+ChapterNr+" Page="+DictPage+"   ");
 
-			window.alert("Page="+DictPage+"   "+"Chapter="+ChapterNr);
-				//window.location = "https://www.youtube.com/watch?v=a58Phhm8kuI&ab_channel=B%C3%B8rneTV"; 
-			if ((ChapterNr==1)&&(DictPage==2))
-				{window.location = "https://youtu.be/nhb89cifxW8?t=16";} 
-			else if ((ChapterNr==1)&&(DictPage==3))
-				{window.location = "https://youtu.be/a58Phhm8kuI";} 
-			else if ((ChapterNr==1)&&(DictPage==6))
-				{window.location = "https://youtu.be/zgKECHrWpU4";} 
-			//if ((ChapterNr==1)&&(DictPage==6))
-			//	{window.location = "https://youtu.be/zgKECHrWpU4";} 
-			else if ((ChapterNr==1)&&(DictPage==9))
-				{window.location = "https://youtu.be/iolFBh6OrTA?t=17";} 
-			else if ((ChapterNr==2)&&(DictPage==1))
-				{window.location = "https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV";} 
-			else if ((ChapterNr==2)&&(DictPage==3))
-				{window.location = "https://www.youtube.com/watch?v=ACGNuROv4p0&ab_channel=PeterMains";} 
-			else if ((ChapterNr==2)&&(DictPage==5))
-				{window.location = "https://youtu.be/HtkHSWG9Ti0";} 
-			else if ((ChapterNr==3)&&(DictPage==1))
-				{window.location = "https://youtu.be/dvavLd3Xq5Y";} 
-			else if ((ChapterNr==3)&&(DictPage==3))
-				{window.location = "https://youtu.be/W72JGtCPHTw";} 
-			else if ((ChapterNr==3)&&(DictPage==4))
-				{window.location = "https://youtu.be/QgUjWDX6RgU";} 
-				else{window.alert("no youtube video for this page");}
+				//window.open("https://youtu.be/a58Phhm8kuI"); 
+			
+			if (ChapterNr==1)
+				{
+					if (DictPage==2){window.open( "https://youtu.be/nhb89cifxW8?t=16");} 
+					else if (DictPage==3)
+						{window.open( "https://youtu.be/a58Phhm8kuI");} 
+					else if (DictPage==6)
+						{window.open( "https://youtu.be/zgKECHrWpU4");} 
+					//if ((ChapterNr==1)&&(DictPage==6))
+					//	{window.open( "https://youtu.be/zgKECHrWpU4");} 
+					else if (DictPage==9)
+						{window.open( "https://youtu.be/iolFBh6OrTA?t=17");} 
+				}
+			
+			else if (ChapterNr==2)
+			{
+					if(DictPage==1)
+					{window.open( "https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV");} 
+				else if ((DictPage==3)||(DictPage==4))
+					{window.open( "https://www.youtube.com/watch?v=ACGNuROv4p0&ab_channel=PeterMains");} 
+				else if (DictPage==5)
+					{window.open( "https://youtu.be/HtkHSWG9Ti0");} 
+				else if (DictPage==6)
+					{window.open( "https://youtu.be/Z4d36lmtRII");} 
+				else if (DictPage==7)
+					{window.open( "https://youtu.be/Z4d36lmtRII");} 
+				else if (DictPage==8)
+					{window.open( "https://youtu.be/SM_s5cwE4z0 ");} 
+			}
+
 				
+			else if (ChapterNr==3)
+			{
+				if ((DictPage==1)||(DictPage==2))
+				{window.open( "https://youtu.be/dvavLd3Xq5Y");} 
+			else if (DictPage==3)  
+				{window.open( "https://youtu.be/W72JGtCPHTw");} 
+			else if (DictPage==4)
+				{window.open( "https://youtu.be/QgUjWDX6RgU");} 
+			}
+				else{window.alert("no youtube video for this page");}
+				//*/
+			
 		}
-		/*
-		redirectF = function(){
-			console.log("redirectF");
-			location.assign("https://www.w3schools.com");
-		}
-		*/
+
 		drawCoin = function(){
 			
 

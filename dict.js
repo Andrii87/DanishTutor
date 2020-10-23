@@ -215,7 +215,7 @@ dict={
         page3:{
         	//Gurli Gris 4 - 35 Natdyr
             'sengetid':'bedtime',
-            'bare rolig':'dont worry',
+            'bare rolig':"don't worry",
             'samle':'collect',
             'grøntsager':'vegetables',
             'lommelygte':'flashlight',
@@ -226,17 +226,27 @@ dict={
             'Vær bange':'be scared',
             'sommerfugle':'butterflies',
             'ildflue':'firefly',
+            //------------------------//
+            
+           
+
+        },
+        page4:{
+            	//Gurli Gris 4 - 35 Natdyr
+            'op i himlen':'',
             'op i himlen':'up in the sky',
             'stjerneskud':'shooting star',
             'ildsted':'fireplace',
             'mave':'tummy',
-            
-
-
-        },
-        page4:{
-            'op i himlen':'',
-            '':'',
+            'sengetid':'sleeping time',
+            'jakke og støvler':'jacket and boots',
+            'for lang tid':'too long time',
+            'snegl':'snail',
+            'høns':'hens',
+            'tænde ':'turn on',
+            'sluk':'turn off',
+            'prøve':'try',
+            'natdyr':'night animals',
             
 
 
@@ -256,24 +266,78 @@ dict={
             'det skal fell ud':'it should fall out',
             'mynt':'coin',
             'børste tænder':'brush teeth',
+            'under puden':'under pillow',
 
         },
          page6:{
-            //Gurli Gris 1 - 22 Tandfeen
-            //https://youtu.be/HtkHSWG9Ti0?t=86
-            //https://youtu.be/lJnADJxyr54  //eng
-            'under puden':'under pillow',
-            '':'',
-            '':'',
-            '':'',
-            '':'',
-            '':'',
-            '':'',
-            '':'',
-            '':'',
-            '':'',
-            '':'',
-            '':'',
+             //bedtime gurli gris
+            //https://youtu.be/Z4d36lmtRII
+            'badetid':'bath time',
+            'skynd dig':'hurry up',
+            'lidt mere':'a little more',
+            'men':'but',
+            'plaske':'splash',
+            'ikke mere':'no more',
+            'lidt længere':'a little longer',
+            'er forbi':'is over',
+            'nu skal du':'now you should',
+            'børste tænder':'brush teeth',
+            'er forbi':'is over',
+            'altid':'always',
+            'i seng':'in bed',
+            'læse bog':'read a book',
+            
+           
+
+        },
+        page7:{
+            //bedtime gurli gris
+            //https://youtu.be/Z4d36lmtRII
+
+            'Jeg er lidt':'I am a little',
+            'træt':'tired',
+            'sengetid':'bedtime',
+            'søvnig':'sleepy',
+            'må vi lege':'can we play ',
+            'udenfor':'outside',
+            'hoppe':'jump',
+            'i mudderet':'in the mud',
+            'han elsker':'he loves',
+            'største':'largest',
+            //----------------------------------//
+            'verdens største':'worlds biggest',
+            'Det kan jeg see':'I can see that',
+            'hurtig':'fast',
+
+        },
+        
+        page8:{
+            //https://youtu.be/SM_s5cwE4z0
+
+            'købe':'buy',
+            'elsker at sidde':'loves sitting',
+            'Må jeg':'can I',
+            'indkøbsvogn':'shopping trolley',
+            'på listen':'on the list',
+            'Denne vej':'this way',
+            'læg dem':'put them',
+            'også':'also',
+            
+            'er vognen':'is the trolley',
+            'godt gået':'well done',
+            'det var flot':' great',
+            'jeg kan se den':'I can see it',
+            'kan ikke huske':'cannot remember',
+            'løg':'onions',
+            'sidste ting':'last thing',
+
+            'er det på listen':'is it on the list',
+            'du kan vælge':'you may choose',
+            'hvem sagde det':'who put it',
+            'slemme dreng':'bad boy',
+            'lækker':'delicious',
+            'lade som om':'pretend',
+
 
         },
     },
