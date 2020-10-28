@@ -446,3 +446,30 @@ dict={
         },
     }
 }
+
+        /*
+        var Danish  =["folk"   ,"skal"    ,"flere" , "tiden"     ,"rejse",      "døde",      "om",   "kigge", "sidste","uge"  , "hvorfor","hvordan","tilføje","ting","nemlig","forsamlinger forbudt "];
+        var English =["people","should","more"     ,"the time"   ,"travel"     ,"dead",       "about","look",  "last",  "week","why"    ,    "how", "add"   , "thing","exactly","gatherings forbidden"];
+        var Danish2 =["det sker"  ,"med","en smule","steget"   ,"penge","dyrere"        ,"bolig"   ,"kræver" ,"beslutning","åbne","han betaler","priserne"," falder"    ,"fortsæt"  ,"muligt"  ,"jeg mener","virkelig","første gang","spise","øjeblik","mange","meget","noget mad"];
+        var English2=["it happens","with","a bit"  ,"increased","money","more expensive","property","demands","decision"  ,"open","he pays"   ,"the prices","are falling","continue","possible","I think"  ,"really"  ,"first time" ,"eat"  ,"moment"  ,"many","a lot","some food"];
+        var Danish3 =["betyder","genert","larmende","sød" ,"hoppe i mudder","vindue","hurtigere","kender","sikkert", "efter","falde i søvn","egentlig","hjernen","vejr"     ,"vejret","vigtigt"];
+        var English3=["means"  ,"shy"   ,"noisy"    ,"sweet","jump in mud","window","faster","know"     ,"certainly","after","fall asleep" ,"actually","the brain","weather","the weather","important"];
+        
+        var Danish4 =["afskyeligt" ,"rask"   ,"Jeg ringer","prikker","ansigt","pilene","slet ikke","det blæser"  ,"vær forsigtig"   ,"tung","reddet","solskinsdag"   ,"regndag" ,"rutsjebane"    ,"stadig"  ,"flyve","vind","vente"];
+        var English4 =["disgusting","healthy","I am calling","dots"    ,"face"  ,"arrows","not at all","it blows","be careful"    ,"heavy","saved","sunny day"  ,"rainy day","rollercoaster","still","fly"   ,"wind","wait"];
+        
+        var Danish5 =["forsamlinger","selskabet ","ville ikke","frivilligt","halve antal"  ,"antal passagerne"  ,"anbefalingerne","to meters","afstand","undgå ","tæt  ","kontakt  ","at forhindre"," smitte"];
+        var English5 =["gatherings","the company","would not","voluntary","half the number","number of passengers","recommendations","two meters","away","avoid","close","contact","to prevent","infection"];
+        
+        var Danish6 =["prøv igen","sjovt","endelig","beskytter","vente","udtaler"     ,""];
+        var English6 =["try again","fun","finally","protects"  ,"wait","pronunciation",""];
+
+        var Danish7 =["hvem er det","klar","hemmelig","hemmelig ting","dejlig","dårlig","nok","hvor gammel","Jeg hvisker","Jeg keder mig","valg","stue"         ,"tillyke","Tillyke med fødselsdagen"];
+        var English7 =["who is it" ,"ready","secret","secret stuff","nice","bad","enough"    ,"how old"    ,"I whisper","I am bored"   ,"choise","living room"  ,"congratulations","Happy birthday"];
+        
+        var Danish8 =["hide der","gensidig","spændende","ballade","side om side","afholde fest","fint nok","frisk"  ,"fisk","vildsvin"];
+        var English8 =["right there","mutual","exciting","trouble","side by side","hold a party","good enough","fresh","fish","wild pig"];
+
+        var Danish9 =["hvem er det?","hvor er du?","hvad","hvorfor","hvordan","hvilken","hvornår","hvor meget?","hvor mange?"];
+        var English9 =["who is it?","where are you?","what","why","how"     ,"which","when"     ,"how much?"    ,"how many?"];
+*/
