@@ -3,8 +3,17 @@
 <head>
 	<title>Danish Tutor</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+		body {
+	  background-image: url('House.jpg');
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;  
+	  background-size: auto;
+	}
+	</style>
 </head>
 <body>
+
 	<div id="bodydiv" style="    
 		display: flex;
 	    justify-content: center;
@@ -16,7 +25,8 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			background-color: gray;"> 
+			background-color: gray;
+			opacity: 0.85"> 
 			<!--Окаймовка серого цвета, вокруг поля для игры   -->
 			
 			<canvas height="600" width="600" id="myCanvas" style="border:3px solid black;
@@ -39,18 +49,6 @@
 			
 			
 		</div>
-		<!--
-		<div id="YT" style="    
-		width: 700px;
-		height: 650px;
-		position: fixed; ;
-		background:red;
-		display: none;
-		"		>
-			
-													
-		</div>
-		-->
 	</div>
 	
 </div>
@@ -59,7 +57,7 @@
 	<script src="dict.js"></script> 
 	<script type="text/javascript">
 
-//------------------------------------------------------------------------------------//
+	//------------------------------------------------------------------------------------//
 		// Work-around chromium autoplay policy
       // https://github.com/emscripten-core/emscripten/issues/6511
       function resumeAudio(e) {
@@ -120,6 +118,7 @@
 		myCanvas.font = "24px Calibri";
 		myCanvas.fillText('press Enter to start',160, 300);
 		*/
+
 		//---------------------------------Start Screen--------------------//
 
 		myCanvas.font = "48px Calibri";
@@ -155,7 +154,7 @@
 		var DanNum=0; //arrays start with index 0 
 
 		
-/*
+		/*
 		var Danish 	=["folk"   ,"skal"    ,"flere" , "tiden"     ,"rejse",      "døde",      "om",   "kigge", "sidste","uge"  , "hvorfor","hvordan","tilføje","ting","nemlig","forsamlinger forbudt "];
 		var English =["people","should","more"	   ,"the time"   ,"travel"     ,"dead",       "about","look",  "last",  "week","why"	,    "how", "add"   , "thing","exactly","gatherings forbidden"];
 		var Danish2 =["det sker"  ,"med","en smule","steget"   ,"penge","dyrere"	    ,"bolig"   ,"kræver" ,"beslutning","åbne","han betaler","priserne"," falder"    ,"fortsæt"  ,"muligt"  ,"jeg mener","virkelig","første gang","spise","øjeblik","mange","meget","noget mad"];
