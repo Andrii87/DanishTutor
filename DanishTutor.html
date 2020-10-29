@@ -11,9 +11,9 @@
 	  background-attachment: fixed;  
 	  background-size: auto;
 	}
-	@media  (max-width: 768px) {
+	@media(max-width: 900px) {
   		body {
-  			background-image:none;
+  			/*background-image:none; */
    			 background-color: lightblue;
  			 }
  		#canvasdiv{
@@ -89,26 +89,6 @@
 	<script src="dict.js"></script> 
 	<script type="text/javascript">
 
-	//------------------------------------------------------------------------------------//
-		// Work-around chromium autoplay policy
-      // https://github.com/emscripten-core/emscripten/issues/6511
-      function resumeAudio(e) {
-	  if (typeof Module === 'undefined'
-	      || typeof Module.SDL2 == 'undefined'
-	      || typeof Module.SDL2.audioContext == 'undefined')
-	      return;
-	  if (Module.SDL2.audioContext.state == 'suspended') {
-	      Module.SDL2.audioContext.resume();
-	  }
-	  if (Module.SDL2.audioContext.state == 'running') {
-	      document.getElementById('canmyCanvasvas').removeEventListener('click', resumeAudio);
-	      document.removeEventListener('keydown', resumeAudio);
-	  }
-      }
-      document.getElementById('myCanvas').addEventListener('click', resumeAudio);
-      document.addEventListener('keydown', resumeAudio);
-
-//-------------------------------------------------------------------------------------------//
 
 		var coin = new Audio('../coin.wav');
 		var No = new Audio('../No.wav');
@@ -301,7 +281,7 @@
 	           		soundFlag=false;
 
 	           	}
-	           	coin.play();
+	           	//coin.play();
 	           	//alert(inputVal+" is Right!!!");
 	           	score++;
 	           	DanNum++;
