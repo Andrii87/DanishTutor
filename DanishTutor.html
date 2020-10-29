@@ -447,18 +447,21 @@
 					myCanvas.font = "24px Calibri";
 					myCanvas.fillText(score +' out of '+DanNum,140, 150);
 					
+
+					myCanvas.fillText('Press 1, 2 or 3 to change Page of Dictionary', 100, 350);
+					myCanvas.fillText('Current Page:'+DictPage,140, 450);
 					if (score >= (DanNum-2)){
 						win.play();
 						levDone[DictPage]=1;
 						drawCoin();
 						myCanvas.fillText('Nice try, press Enter to try again',100, 250);
+						DictPage++;
 					}
 						else
 						myCanvas.fillText('Not perfect, press Enter to try again',100, 250);
 
-					myCanvas.fillText('Press 1, 2 or 3 to change Page of Dictionary', 100, 350);
-					myCanvas.fillText('Current Page:'+DictPage,140, 450);
-					DictPage++;
+					
+					
 
 					myCanvas.fillText('Press Y to wach a cartoon', 100, 550);//will fire GoToYoutube function
 					myCanvas.restore();
