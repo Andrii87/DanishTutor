@@ -23,7 +23,8 @@
  		}
   		#myCanvas{
   			width: 95%;
-  			height: 50%}
+  			height: 50%;
+  		}
 	
 	}
 	#bodydiv {
@@ -68,7 +69,7 @@
 		<div id="canvasdiv" > 
 			<!--Окаймовка серого цвета, вокруг поля для игры   -->
 			
-			<canvas height="600" width="600" id="myCanvas" ></canvas>
+			<canvas height="550" width="600" id="myCanvas" ></canvas>
 				<!--Поле для происходит движ (канвас)   -->
 				
 			
@@ -115,7 +116,7 @@
 		var Answer;
 		var guessedWrong=false;
 		var WIDTH = 600;
-		var HEIGHT = 600;
+		var HEIGHT = 550;
 		var intervalVar,score;
 		var maxWordInDict=0;
 		TryAgainScreen = false; 
@@ -152,10 +153,10 @@
 		//myCanvas.fillText('press 1,2,3...9  to change pages',160, 450);
 
 		myCanvas.font = "18px Calibri";
-		myCanvas.fillText(('current page is: '+DictPage),160, 550);
+		myCanvas.fillText(('current page is: '+DictPage),160, 500);
 
 		myCanvas.font = "18px Calibri";
-		myCanvas.fillText(('current chapter is: '+ ChapterNr),160, 580);  
+		myCanvas.fillText(('current chapter is: '+ ChapterNr),160, 530);  
 
 		myCanvas.restore();
 
