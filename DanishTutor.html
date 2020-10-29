@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">  -->
 	<title>Danish Tutor</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<style>
@@ -11,38 +11,62 @@
 	  background-attachment: fixed;  
 	  background-size: auto;
 	}
+	@media only screen and (max-width: 600px) {
+  		body {
+  			background-image:none;
+   			 background-color: lightblue;
+ 			 }
+  		#myCanvas{
+  			width: 100%;}
+	}
+	#bodydiv {
+		display: flex;
+	    justify-content: center;
+	}
+	#canvasdiv{
+		width: 700px;
+		height: 650px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: gray;
+		opacity: 0.85
+
+	}
+	#myCanvas{
+		border:3px solid black;
+		top: 5px
+		position: relative;
+	}
+
+
+	#myInput{
+		text-align: center;
+		margin-left:14px; 
+		font-weight: bold;
+		width: 400px; 
+		font-size: 22px;
+		position: relative;
+		top: -10px;" ;
+	}
+	
+
 	</style>
 </head>
 <body>
 
-	<div id="bodydiv" style="    
-		display: flex;
-	    justify-content: center;
-		">
+	<div id="bodydiv" >
 			<!--Див, для центвовки игры   -->
-		<div id="canvasdiv" style="    
-			width: 700px;
-			height: 650px;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			background-color: gray;
-			opacity: 0.85"> 
+		<div id="canvasdiv" > 
 			<!--Окаймовка серого цвета, вокруг поля для игры   -->
 			
-			<canvas height="600" width="600" id="myCanvas" style="border:3px solid black;
-			    top: 5px;
-				position: relative;"></canvas>
-				
+			<canvas height="600" width="600" id="myCanvas" ></canvas>
+				<!--Поле для происходит движ (канвас)   -->
 				
 			
-				<br>	<!--Поле для происходит движ (канвас)   -->
+				<br>	
 			<div width="600">
-					<input type="text" placeholder="Type translation..." id="myInput" style="
-					text-align: center;
-					margin-left:14px; font-weight: bold;width: 400px; font-size: 22px;
-					position: relative;
-					top: -10px;" autofocus>
+					<input type="text" placeholder="Type translation..." id="myInput"  autofocus>
 					
 		    		<!-- Поле для ввода ответов   -->
 			</div>
