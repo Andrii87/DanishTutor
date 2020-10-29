@@ -213,6 +213,9 @@
 			};
 				
 			if ((gameStarted==false)&&(event.keyCode ==13)){ //enter pressed
+				
+				getInputValue();
+				if (Answer=="Y"){ GoToYoutube(); }
 				document.getElementById("myInput").value='';
 				startGame();
 			
@@ -251,12 +254,13 @@
             Answer=inputVal;
             console.log("Your answer: "+inputVal);
             document.getElementById("myInput").value='';//clear prompt field
-           
-           if (checkAnswer()==true) {
-           			wordRight();
-		        }else{
-		        	wordWrong();
-		        }        
+           if (gameStarted==true){
+	           if (checkAnswer()==true) {
+	           			wordRight();
+			        }else{
+			        	wordWrong();
+			        };        
+			}
 		}
 
         checkAnswer = function(){
@@ -427,6 +431,7 @@
 					myCanvas.fillText('Perfect score, you won!',100, 250);
 					myCanvas.fillText('Press 1, 2 or 3 to change Page of Dictionary', 100, 350);
 					myCanvas.fillText('Current Page:'+DictPage,140, 450);
+					DictPage++;
 					myCanvas.restore();
 					win.play();
 
@@ -449,9 +454,12 @@
 						myCanvas.fillText('Nice try, press Enter to try again',100, 250);
 					}
 						else
-					myCanvas.fillText('Not perfect, press Enter to try again',100, 250);
+						myCanvas.fillText('Not perfect, press Enter to try again',100, 250);
+
 					myCanvas.fillText('Press 1, 2 or 3 to change Page of Dictionary', 100, 350);
 					myCanvas.fillText('Current Page:'+DictPage,140, 450);
+					DictPage++;
+
 					myCanvas.fillText('Press Y to wach a cartoon', 100, 550);//will fire GoToYoutube function
 					myCanvas.restore();
 		}
@@ -512,7 +520,7 @@
 
 			ldl=levDone.length;
 			
-			coinX=575;
+			coinX=WIDTH-25;
 			cDist=45;
 			for (i = 1; i < ldl; i++){
 				if (levDone[i]==1){
@@ -561,7 +569,7 @@
 
 
 		}
-		//----------------W3school------------//
+		//----------------W3school-sound-----------//
 		function sound(src) {
 		  this.sound = document.createElement("audio");
 		  this.sound.src = src;
@@ -578,7 +586,7 @@
 		    this.sound.pause();
 		  }
 		}
-		//----------------W3school------------//
+		//----------------W3school-sound-----------//
 		gameLoop = function(){			
 			myCanvas.fillRect(0,0,WIDTH,HEIGHT);  //draw black canvas 
 			//myCanvas.clearRect(0,0,WIDTH,HEIGHT);
