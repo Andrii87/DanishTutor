@@ -11,6 +11,7 @@
 	  background-attachment: fixed;  
 	  background-size: auto;
 	}
+	/*for mobiles*/
 	@media(max-width: 600px) {
   		body {
   			/*background-image:none; */
@@ -25,6 +26,14 @@
   			width: 95%;
   			height: 50%;
   		}
+  		/*
+  		#canvasdiv{
+			width: 800px;
+
+		}
+		#myCanvas{
+			height: 600px;
+		}*/
 	
 	}
 	#bodydiv {
@@ -32,8 +41,6 @@
 	    justify-content: center;
 	}
 	#canvasdiv{
-		width: 700px;
-		/*height: 650px;*/
 		height: 60%;
 		display: flex;
 		flex-direction: column;
@@ -42,10 +49,23 @@
 		opacity: 0.85
 
 	}
+	@media(min-width: 601px) {
+		#canvasdiv{width: 700px; }
+	}
 	#myCanvas{
 		border:3px solid black;
 		top: 5px
 		position: relative;
+	}
+
+	@media(min-width: 1000px) {
+		#canvasdiv{
+			width: 800px;
+
+		}
+		#myCanvas{
+			height: 600px;
+		}
 	}
 
 
@@ -69,7 +89,7 @@
 		<div id="canvasdiv" > 
 			<!--Окаймовка серого цвета, вокруг поля для игры   -->
 			
-			<canvas height="500" width="600" id="myCanvas" ></canvas>
+			<canvas height="600" width="600" id="myCanvas" ></canvas>
 				<!--Поле для происходит движ (канвас)   -->
 				
 			
@@ -116,7 +136,7 @@
 		var Answer;
 		var guessedWrong=false;
 		var WIDTH = 600;
-		var HEIGHT = 500;
+		var HEIGHT = 600;
 		var intervalVar,score;
 		var maxWordInDict=0;
 		TryAgainScreen = false; 
@@ -314,7 +334,7 @@
 			let currentWordNumber=0;
 			let currentDictPage=1;
 			let currentDictChapter=1;
-			maxWordInDict=0;
+			 maxWordInDict=0;
 			for (let chapter in dict ){
 				if (currentDictChapter==ChapterNr){
 					console.log('right chapter');
