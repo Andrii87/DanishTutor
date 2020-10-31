@@ -5,11 +5,12 @@
 	<title>Danish Tutor</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<style>
-		body {
-	  background-image: url('House.jpg');
-	  background-repeat: no-repeat;
-	  background-attachment: fixed;  
-	  background-size: auto;
+		/*body { */
+			#bodydiv{
+	  	background-image: url('House.jpg');
+ 		background-repeat: no-repeat; 
+ 		background-size: cover;
+ 		background-position: center;
 	}
 	/*for mobiles*/
 	@media(max-width: 600px) {
@@ -126,6 +127,7 @@
 		
 		No.volume=0.1;
 		coin.volume=0.1;
+		coin2.volume=0.2
 		ohNo.volume=0.5;
 		win.volume=0.5;
 
@@ -265,7 +267,7 @@
 					myCanvas.fillStyle = 'Orange';
 					myCanvas.font = "24px Calibri";
 
-					myCanvas.fillText('DictPage changed to:'+DictPage,140, 550);
+					myCanvas.fillText('DictPage changed to:'+DictPage,140, 500);
 					myCanvas.restore();
 
 					//document.getElementById("myInput").value='';
@@ -388,7 +390,8 @@
 			if (wordY>600){
 				DanNum++;
 				wordY=0;
-				score=score-2;
+				if (guessedWrong==true){score=score-1;}
+				else{score=score-2;}
 				document.getElementById("myInput").value='';//clear prompt field
 				ohNo.play();
 				setCurrentWord();
@@ -487,13 +490,13 @@
 					
 					
 
-					myCanvas.fillText('Press Y to wach a cartoon', 100, 550);//will fire GoToYoutube function
+					myCanvas.fillText('Press Y to wach a cartoon', 100, 500);//will fire GoToYoutube function
 					myCanvas.restore();
 		}
 		
 		GoToYoutube = function(){
 			
-			
+			DictPage--;
 			window.alert("Chapter="+ChapterNr+" Page="+DictPage+"   ");
 
 				//window.open("https://youtu.be/a58Phhm8kuI"); 
@@ -539,7 +542,7 @@
 			}
 				else{window.alert("no youtube video for this page");}
 				//*/
-			
+		DictPage++;
 		}
 
 		drawCoin = function(){
