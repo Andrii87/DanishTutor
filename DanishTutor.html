@@ -276,6 +276,11 @@
 		function getInputValue(){ //Function is called on pressing Enter
             // Selecting the input element and get its value 
             var inputVal = document.getElementById("myInput").value;
+            if (gameStarted==false){
+            	if (inputVal<=9){
+            		changePage(inputVal);
+            	}
+            }
             Answer=inputVal;
             console.log("Your answer: "+inputVal);
             document.getElementById("myInput").value='';//clear prompt field
@@ -289,7 +294,7 @@
 		}
 
         checkAnswer = function(){
-        	let AnswerLow=Answer.toLowerCase();			//Ignore high or lower case
+        	let AnswerLow=Answer.toLowerCase();			//Ignore higher or lower case
 			let ctAnswerLow=currentAnswer.toLowerCase();
 			let AnswerLowTrimmed=AnswerLow.trim();         //cuts spaces at beginning and at the end
 			let ctAnswerLowTrimmed=ctAnswerLow.trim();
@@ -422,13 +427,7 @@
 
 		}
 
-		/*
-		makeYTlink =function(shortLink){
-			https://www.youtube.com/embed/QgUjWDX6RgU?rel=0&amp;autoplay=0&mute=0&loop=1&controls=1&showinfo=0
-			return("https://www.youtube.com/embed/"+shortLink+"?rel=0&amp;autoplay=0&mute=0&loop=1&controls=1&showinfo=0");
-		}
-		*/
-
+		
 		gameOver = function (){
 
 					if (score >= DanNum){
@@ -438,6 +437,7 @@
 				gameReset();
 				return;
 		}
+
 		gameReset = function(){
 
 					gameStarted=false;
@@ -446,6 +446,7 @@
 					console.log("clear interval");
 					clearInterval(intervalVar);// this stops programm
 		}
+
 		youWon = function(){
 					TryAgainScreen=true; 
 					gameStarted=false;
@@ -463,6 +464,8 @@
 					win.play();
 
 		}
+
+
 		tryAgain =function(){
 			TryAgainScreen=true; 
 			gameStarted=false;
@@ -494,6 +497,7 @@
 					myCanvas.restore();
 		}
 		
+
 		GoToYoutube = function(){
 			
 			DictPage--;
@@ -545,6 +549,7 @@
 		DictPage++;
 		}
 
+		
 		drawCoin = function(){
 			
 
