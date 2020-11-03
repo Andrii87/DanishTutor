@@ -139,6 +139,7 @@
 		//myCanvas.volume=0;
 
 		var Answer;
+		var pageChanged=false;
 		var guessedWrong=false;
 		var WIDTH = 600;
 		var HEIGHT = 550;
@@ -460,6 +461,7 @@
 					myCanvas.fillText('Press 1, 2 or 3 to change Page of Dictionary', 100, 350);
 					myCanvas.fillText('Current Page:'+DictPage,140, 450);
 					DictPage++;
+					pageChanged=true;
 					myCanvas.restore();
 					win.play();
 
@@ -486,9 +488,11 @@
 						drawCoin();
 						myCanvas.fillText('Nice try, press Enter to try again',100, 250);
 						DictPage++;
+						pageChanged=true;
 					}
 						else
 						myCanvas.fillText('Not perfect, press Enter to try again',100, 250);
+						pageChanged=false;
 
 					
 					
@@ -499,8 +503,8 @@
 		
 
 		GoToYoutube = function(){
-			
-			DictPage--;
+			if (pageChanged==true)
+			{DictPage--;}
 			window.alert("Chapter="+ChapterNr+" Page="+DictPage+"   ");
 
 				//window.open("https://youtu.be/a58Phhm8kuI"); 
@@ -546,7 +550,8 @@
 			}
 				else{window.alert("no youtube video for this page");}
 				//*/
-		DictPage++;
+		if (pageChanged==true)
+		{DictPage++;}
 		}
 
 		
