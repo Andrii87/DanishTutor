@@ -238,7 +238,7 @@ dict={
             'stjerneskud':'shooting star',
             'ildsted':'fireplace',
             'mave':'tummy',
-            'sengetid':'sleeping time',
+            'sengetid':'bedtime',
             'jakke og støvler':'jacket and boots',
             'for lang tid':'too long time',
             'snegl':'snail',
