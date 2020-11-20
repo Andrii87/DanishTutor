@@ -278,9 +278,11 @@
             // Selecting the input element and get its value 
             var inputVal = document.getElementById("myInput").value;
             if (gameStarted==false){
-            	if (inputVal<=9){
+				if (inputVal!=''){
+					if (inputVal<=9){
             		changePage(inputVal);
-            	}
+            	}}
+            	
             }
             Answer=inputVal;
             console.log("Your answer: "+inputVal);
