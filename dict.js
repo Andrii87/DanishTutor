@@ -426,17 +426,38 @@ dict={
 
         },
         page5:{
+            //Recycling
+            //https://youtu.be/Z2AD0FltGBw  dat 
+            //https://youtu.be/LIP-EN7Ygro  eng
+            'genbrug':'recycling',
+            'skralde':'garbage',
+            'skraldemand':'garbage man',
+            'tyr':'bull',
+            'stille':'quiet',
+            
+            'har tømt':'has emptied',
+            'flaske':'bottle',
+            'hvad betyder det':'what does it mean',
+            'skraldespand':'garbage bin',
+            'dåser':'tin cans',
+
+            'kasse':'box',
+            'avis':'newspaper',
+            'klar':'ready',
+            
             
 
         },
          page6:{
             
             'hvad er':'',
+
             '':'',
             '':'',
             '':'',
             '':'',
             '':'',
+
             '':'',
             '':'',
             '':'',
