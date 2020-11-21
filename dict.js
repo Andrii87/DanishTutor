@@ -332,18 +332,18 @@ dict={
             //https://youtu.be/SM_s5cwE4z0    dat
             //https://youtu.be/yPsywDWFjOg    eng
            
-            'det var flot':' great',
+            'det var flot'  :' great',
             'jeg kan se den':'I can see it',
             'kan ikke huske':'cannot remember',
-            'løg':'onions',
-            'sidste ting':'last thing',
+            'løg'           :'onions',
+            'sidste ting'   :'last thing',
 
             'er det på listen':'is it on the list',
-            'du kan vælge':'you may choose',
+            'du kan vælge'  :'you may choose',
             'hvem sagde det':'who put it',
-            'slemme dreng':'bad boy',
-            'lækker':'delicious',
-            'lade som om':'pretend',
+            'slemme dreng'  :'bad boy',
+            'lækker'        :'delicious',
+            'lade som om'   :'pretend',
 
 
         },

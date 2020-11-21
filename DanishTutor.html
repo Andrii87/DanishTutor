@@ -15,10 +15,7 @@
 			<div id="canv_inpt">
 				<canvas height="550" width="600" id="myCanvas" ></canvas>
 					<!--Поле для происходит движ (канвас)   -->
-					
-				
-					<br>	
-				<br>	
+						
 					<br>	
 				<div width="600">
 						<input type="text" placeholder="Type translation..." id="myInput"  autofocus>
@@ -67,7 +64,8 @@
 		var HEIGHT = 550;
 		var intervalVar,score;
 		var maxWordInDict=0;
-		TryAgainScreen = false; 
+		var TryAgainScreen = false; 
+		var easyMode = true;
 		
 		var levDone= [false,0,0,0,0,0,0,0,0,0];
 		//var levDone= [false,1,1,2,0,1,0,1,0,0];
@@ -330,8 +328,9 @@
 			myCanvas.restore();
 
 		}
+		
 		drawAnswer = function (){
-			if (guessedWrong==true){
+			if ((guessedWrong==true)||((easyMode==true)&&(wordY>200))){
 				myCanvas.save();
 				myCanvas.fillStyle = "white";
 				{myCanvas.fillText("Answer: "+currentAnswer, 10, skoreY);}
@@ -449,8 +448,10 @@
 			
 			else if (ChapterNr==2)
 			{
-					if(DictPage==1)
+				if(DictPage==1)
 					{window.open( "https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV");} 
+				else if (DictPage==2)
+					{window.open( "https://youtu.be/sfin4wzxsBI?t=15");} 
 				else if ((DictPage==3)||(DictPage==4))
 					{window.open( "https://www.youtube.com/watch?v=ACGNuROv4p0&ab_channel=PeterMains");} 
 				else if (DictPage==5)
@@ -461,6 +462,9 @@
 					{window.open( "https://youtu.be/Z4d36lmtRII?t=15");} 
 				else if (DictPage==8)
 					{window.open( "https://youtu.be/SM_s5cwE4z0?t=15 ");} 
+				else if (DictPage==9)
+					{window.open( "https://youtu.be/SM_s5cwE4z0?t=15 ");} 
+					
 			}
 
 				
