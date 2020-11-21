@@ -140,10 +140,10 @@
 			if ((gameStarted==false)&&(event.keyCode ==187)) { //"+" pressed
 							myCanvas.save();
 							myCanvas.fillRect(0,0,WIDTH,HEIGHT);
-							ChapterNr++;drawRects();drawHomeRect(ChapterNr);
+							ChapterNr++; drawRects(); drawHomeRect(ChapterNr);
 							myCanvas.font = "18px Calibri";
 							myCanvas.fillStyle = 'Orange';
-							myCanvas.fillText(('current chapter is: '+ ChapterNr),160, 580);  
+							myCanvas.fillText(('Chapter changed to: '+ ChapterNr),160, 520);  
 							myCanvas.restore();
 			};
 		
@@ -154,7 +154,7 @@
 							
 							myCanvas.font = "18px Calibri";
 							myCanvas.fillStyle = 'Orange';
-							myCanvas.fillText(('current chapter is: '+ ChapterNr),160, 580);  
+							myCanvas.fillText(('Chapter changed to: '+ ChapterNr),160, 520);  
 							myCanvas.restore();
 			};
 				
@@ -328,7 +328,7 @@
 			myCanvas.restore();
 
 		}
-		
+
 		drawAnswer = function (){
 			if ((guessedWrong==true)||((easyMode==true)&&(wordY>200))){
 				myCanvas.save();
