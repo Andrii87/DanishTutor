@@ -337,7 +337,11 @@ dict={
             'kan ikke huske':'cannot remember',
             'løg'           :'onions',
             'sidste ting'   :'last thing',
-
+            ' Seddel'       :'note',
+            
+            ' det hedder'   :'it is called',
+            ' strege dem'   :'cross it out',
+            
             'er det på listen':'is it on the list',
             'du kan vælge'  :'you may choose',
             'hvem sagde det':'who put it',
