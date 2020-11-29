@@ -317,13 +317,13 @@ dict={
             'købe':'buy',
             'elsker at sidde':'loves sitting',
             'Må jeg':'can I',
-            'indkøbsvogn':'shopping trolley',
+            'indkøbsvogn':'shopping cart',
             'på listen':'on the list',
             'Denne vej':'this way',
             'læg dem':'put them',
             'også':'also',
             
-            'er vognen':'is the trolley',
+            'vognen':'cart',
             'godt gået':'well done',
 
 
@@ -343,7 +343,7 @@ dict={
             ' strege dem'   :'cross it out',
             
             'er det på listen':'is it on the list',
-            'du kan vælge'  :'you may choose',
+            'du kan vælge'  :'you can choose',
             'hvem sagde det':'who put it',
             'slemme dreng'  :'bad boy',
             'lækker'        :'delicious',
@@ -411,14 +411,17 @@ dict={
         page4:{
             //https://youtu.be/QgUjWDX6RgU
             'nemt  ':'easily',
-            'tilvaerelsen  ':'existence  ',
+            'tilvaerelsen  ':'existence',
+            'bolig  ':'housing',
             'selv om sommeren':'even in the summer',
             'overdrive   ':'exaggerate',
+
             'unge  ':'young',
             'muligheder  ':'options',
             'billigt  ':'cheap',
             'ungdommen  ':'the youth',
             'skrive':'write',
+            
             'hvis  ':'whose',
             'dovne':'lazy',
             'fremstilling':'manufacturing',
