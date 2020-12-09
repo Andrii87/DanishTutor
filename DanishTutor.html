@@ -243,7 +243,8 @@
 
 	           	}
 	           	//coin.play();
-	           	//alert(inputVal+" is Right!!!");
+				   //alert(inputVal+" is Right!!!");
+				saveData();
 	           	score++;
 	           	DanNum++;
 	           	//console.log("Danish.length: "+Danish.length);
@@ -270,11 +271,11 @@
 			 maxWordInDict=0;
 			for (let chapter in dict ){
 				if (currentDictChapter==ChapterNr){
-					console.log('right chapter');
+					//console.log('right chapter');
 				
 				for (let page in dict[chapter]){
 					if (currentDictPage==(DictPage)){
-						console.log("right chapter!");
+						//console.log("right chapter!");
 						for(let dan in dict[chapter][page] ){
 							//here we iterate an object, and if number of object property is the same as DanNum , we show it
 							if (currentWordNumber==DanNum){
@@ -288,7 +289,7 @@
 								if(currentWordNumber>maxWordInDict){
 										
 										maxWordInDict=currentWordNumber
-										console.log("maxWordInDict is set to:"+maxWordInDict);
+										//console.log("maxWordInDict is set to:"+maxWordInDict);
 									};
 					}
 
@@ -372,6 +373,8 @@
 		}
 
 		youWon = function(){
+					
+				   
 					TryAgainScreen=true; 
 					gameStarted=false;
 					myCanvas.save();
@@ -379,6 +382,9 @@
 					drawCoin();
 					myCanvas.fillStyle = 'Orange';
 					myCanvas.font = "24px Calibri";
+					let wordsGuessed=localStorage.getItem("wordsGuessed");
+					myCanvas.fillText(wordsGuessed ,100, 100);
+
 					myCanvas.fillText(score +' out of '+DanNum,140, 150);
 					myCanvas.fillText('Perfect score, you won!',100, 250);
 					myCanvas.fillText('Press 1, 2, 3 etc. to change Page of Dictionary', 100, 350);
@@ -391,16 +397,34 @@
 
 		}
 
+		function saveData(){
+			console.log("------------------------------"+localStorage.getItem("wordsGuessed"));
+				   let wordsGuessed=localStorage.getItem("wordsGuessed");
+				   console.log("wordsGuessed:"+wordsGuessed);
+				   if (wordsGuessed=='NaN'){wordsGuessed=1}
+				   if (wordsGuessed=='null'){wordsGuessed=1}
+				   else 
+				   {wordsGuessed=parseInt(wordsGuessed);
+				   wordsGuessed++;}
+				   localStorage.setItem("wordsGuessed",wordsGuessed);
+		}
+
 
 		tryAgain =function(){
 			TryAgainScreen=true; 
 			gameStarted=false;
 					//window.location = "http://www.example.com"; //works
 					
-				
+					let wordsGuessed=localStorage.getItem("wordsGuessed");
+					console.log('------------------------------wordsGuessed='+wordsGuessed);
+					//myCanvas.fillText(wordsGuessed ,100, 100);
+
+
 					myCanvas.save();
 					myCanvas.fillStyle = 'Orange';
 					myCanvas.font = "24px Calibri";
+					myCanvas.fillText("Total words guessed:"+wordsGuessed ,20, 30);
+
 					myCanvas.fillText(score +' out of '+DanNum,140, 150);
 					
 
