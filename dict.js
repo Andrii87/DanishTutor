@@ -47,9 +47,7 @@ dict={
             'han er for lille':'he is too small',
             'stakkels dreng':'poor boy',
             'undskyld':'sorry',
-            '':'',
-            '':'',
-            '':'',
+           
         
         },
         page4:{
@@ -465,6 +463,9 @@ dict={
             '':'',
             '':'',
 
+            '':'',
+            '':'',
+            '':'',
             '':'',
             '':'',
             '':'',
