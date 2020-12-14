@@ -1,13 +1,20 @@
 dict={
     chapter1:{
+        page0:{
+            //https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV
+            //Gurli Gris 1 - 32 Tordenvejret
+             'Jeg hedder':'I am',   
+            '':'',
+           
+        },
         page1:{
-            grim:'ugly',
+            'grim':'ugly',
             'skynd dig':'hurry up',
-            fridag:'day off',
-            julepynt:'Christmas decorations',
+            'fridag':'day off',
+            'julepynt':'Christmas decorations',
             "rette ud":"straighten out",
 		  	'Det er bare dejligt':"It's just nice",
-            krydderier:'spices',
+            'krydderier':'spices',
             "et sprog":'language',
             "sådan her":"like this",
             "snart":"soon",
@@ -358,6 +365,13 @@ dict={
         },
     },
     chapter3:{
+        page0:{
+            //https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV
+            //Gurli Gris 1 - 32 Tordenvejret
+             'Jeg hedder':'I am',   
+            '':'',
+           
+        },
         page1:{
             //Peppa Pig - Lunch (full episode)
             //https://youtu.be/Ez0qR3m1G4g
