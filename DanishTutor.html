@@ -452,6 +452,9 @@
 		
 
 		GoToYoutube = function(){
+			console.log("clear interval");
+			clearInterval(intervalVar);// this stops programm
+			
 			if (pageChanged==true)
 			{DictPage--;}
 			window.alert("Chapter="+ChapterNr+" Page="+DictPage+"   ");
