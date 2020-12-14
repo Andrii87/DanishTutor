@@ -1,11 +1,16 @@
 
 		/*body { */
 			#bodydiv{
-	  	background-image: url('House.jpg');
+	  	
  		background-repeat: no-repeat; 
  		background-size: cover;
  		background-position: center;
 	}
+	@media(min-width: 600px){
+	#bodydiv{
+		background-image: url('House.jpg');
+	}}
+
 	/*for mobiles*/
 	@media(max-width: 600px) {
   		body {
