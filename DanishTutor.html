@@ -162,8 +162,10 @@
 				
 				getInputValue();
 				if (Answer=="Y"){ GoToYoutube(); }
-				document.getElementById("myInput").value='';
-				startGame();
+				else{
+					document.getElementById("myInput").value='';
+					startGame();
+				}
 			
 			//Enter
 			}else if (event.keyCode ==13){//enter
