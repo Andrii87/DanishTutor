@@ -176,6 +176,13 @@ dict={
 
     },
     chapter2:{
+        page0:{
+            //https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV
+            //Gurli Gris 1 - 32 Tordenvejret
+             'Jeg hedder':'I am',   
+            '':'',
+           
+        },
         page1:{
             //https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV
             //Gurli Gris 1 - 32 Tordenvejret

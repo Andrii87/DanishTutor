@@ -266,7 +266,9 @@
 		setCurrentWord= function(){
 			let ni=0;
 			let currentWordNumber=0;
-			let currentDictPage=1;
+			//let currentDictPage=1;
+			let currentDictPage=0;
+
 			let currentDictChapter=1;
 			 maxWordInDict=0;
 			for (let chapter in dict ){
@@ -454,7 +456,7 @@
 		GoToYoutube = function(){
 			console.log("clear interval");
 			clearInterval(intervalVar);// this stops programm
-			
+
 			if (pageChanged==true)
 			{DictPage--;}
 			window.alert("Chapter="+ChapterNr+" Page="+DictPage+"   ");
@@ -463,6 +465,7 @@
 			
 			if (ChapterNr==1)
 				{
+				
 					if (DictPage==2){window.open( "https://youtu.be/nhb89cifxW8?t=16");} 
 					else if (DictPage==3)
 						{window.open( "https://youtu.be/a58Phhm8kuI");} 
@@ -476,6 +479,7 @@
 			
 			else if (ChapterNr==2)
 			{
+				if (DictPage==0){window.open( "https://youtu.be/nS7tEY5gSJA");} 
 				if(DictPage==1)
 					{window.open( "https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV");} 
 				else if (DictPage==2)
