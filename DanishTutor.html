@@ -161,6 +161,7 @@
 				
 				getInputValue();
 				if (Answer=="Y"){ GoToYoutube(); }
+				if (Answer=="E"||Answer=="e"){ GoToYoutubeEnglish(); }
 				else{
 					document.getElementById("myInput").value='';
 					startGame();
@@ -392,7 +393,7 @@
 					myCanvas.fillText('Perfect score, you won!',100, 250);
 					myCanvas.fillText('Press 1, 2, 3 etc. to change Page of Dictionary', 100, 350);
 					myCanvas.fillText('Current Page:'+DictPage,140, 450);
-					myCanvas.fillText('Press Y to wach a cartoon', 100, 500);//will fire GoToYoutube function
+					myCanvas.fillText('Press Y/E to wach a cartoon (Dansk/English)', 100, 500);//will fire GoToYoutube function
 					DictPage++;
 					pageChanged=true;
 					myCanvas.restore();
@@ -449,7 +450,7 @@
 					
 					
 
-					myCanvas.fillText('Press Y to wach a cartoon', 100, 500);//will fire GoToYoutube function
+					myCanvas.fillText('Press Y/E to wach a cartoon', 100, 500);//will fire GoToYoutube function
 					myCanvas.restore();
 		}
 		
@@ -479,7 +480,8 @@
 			
 			else if (ChapterNr==2)
 			{
-				if (DictPage==0){window.open( "https://youtu.be/nS7tEY5gSJA");} 
+				
+				if (DictPage==0){window.open( https://youtu.be/nS7tEY5gSJA");} 
 				if(DictPage==1)
 					{window.open( "https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV");} 
 				else if (DictPage==2)
@@ -514,6 +516,51 @@
 				else{window.alert("no youtube video for this page");}
 				//*/
 		if (pageChanged==true){DictPage++;};
+		}
+
+		GoToYoutubeEnglish = function(){
+			
+			gameReset();
+
+			if (pageChanged==true)
+			{DictPage--;}
+			window.alert("Chapter="+ChapterNr+" Page="+DictPage+"   ");
+
+				//window.open("https://youtu.be/a58Phhm8kuI"); 
+			
+			
+				
+			
+			 if (ChapterNr==2)
+			{
+					
+
+
+					if (DictPage==0){window.open( "https://youtu.be/RbKPdwBOPF8");} 
+				if(DictPage==1)
+					{window.open( "https://youtu.be/HQOQAcHkWiU?t=15");} 
+				else if (DictPage==2)
+					{window.open( "https://youtu.be/RieCntTdGSQ");}  //eng
+				else if ((DictPage==3)||(DictPage==4))
+					{window.open( "https://youtu.be/0aGUmvVFKr4?t=15");} //eng
+				else if (DictPage==5)
+					{window.open( "https://youtu.be/lJnADJxyr54?t=15");} //eng
+				else if (DictPage==6)
+					{window.open( "https://youtu.be/HV86siFCa7o");} //eng
+				else if (DictPage==7)
+					{window.open( "https://youtu.be/HV86siFCa7o");}  //eng
+				else if (DictPage==8)
+					{window.open( "https://youtu.be/yPsywDWFjOg?t=15 ");} //shopping
+				else if (DictPage==9)
+					{window.open( "https://youtu.be/yPsywDWFjOg?t=15 ");} //shopping
+			}
+			
+
+		if (pageChanged==true){DictPage++;};
+
+
+
+
 		}
 
 		
