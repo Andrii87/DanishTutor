@@ -442,9 +442,15 @@
 					if (score >= (DanNum-2)){
 						win.play();
 						levDone[DictPage]=1;
+						
 						drawCoin();
 						myCanvas.fillText('Nice try, press Enter to try again',100, 250);
-						DictPage++;
+						if (DictPage==9)
+					   {
+						   ChapterNr++;
+						   DictPage=1;
+						}else
+						{DictPage++;}
 						pageChanged=true;
 					}
 					else{
