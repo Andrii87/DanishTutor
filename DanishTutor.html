@@ -125,6 +125,7 @@
 		}
 
 		document.onkeydown = function(event) {
+			if ((gameStarted==false)&&(event.keyCode ==48)) {changePage(0);}
 			if ((gameStarted==false)&&(event.keyCode ==49)) {changePage(1);}
 			if ((gameStarted==false)&&(event.keyCode ==50)) {changePage(2);}
 			if ((gameStarted==false)&&(event.keyCode ==51)) {changePage(3);}
@@ -515,6 +516,9 @@
 				
 			else if (ChapterNr==3)
 			{
+				if (DictPage==0)
+				{ window.open( "https://www.youtube.com/watch?v=nS7tEY5gSJA&ab_channel=B%C3%B8rneTV");} 
+
 				if ((DictPage==1)||(DictPage==2))
 				{window.open( "https://youtu.be/dvavLd3Xq5Y?t=15");} 
 			else if (DictPage==3)  

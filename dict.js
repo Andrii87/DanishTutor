@@ -75,7 +75,7 @@ dict={
         },
 
         page5:{
-           
+           //snow
             'huske':'remember',
             'halstørklæde':'scarf',
             'hue':'hat',
@@ -366,10 +366,26 @@ dict={
     },
     chapter3:{
         page0:{
-            //https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV
-            //Gurli Gris 1 - 32 Tordenvejret
-             'Jeg hedder':'I am',   
-            '':'',
+            //https://www.youtube.com/watch?v=nS7tEY5gSJA&ab_channel=B%C3%B8rneTV
+            //Gurli Gris 1 - Sna 
+
+            'sne'           :' snow',
+            'glad'           :'happy',
+            'meget kold'    :'very cold',
+            ' huske'        :'remember',
+            'hue'           :'hat',
+            'halstørklæde'   :'scarf',
+
+            ' vanter'        :'gloves',
+            ' fodspor'      :'footprints',
+            ' rigtig sjovt' :'really fun',
+            
+            'kroppen'       :'the body',
+            'hoved'         :'head',
+            'ansigt'        :'face',
+            'mund'          :'mouth',
+            'tøj'           :'clothing',
+           
            
         },
         page1:{
