@@ -161,8 +161,8 @@
 			if ((gameStarted==false)&&(event.keyCode ==13)){ //enter pressed
 				
 				getInputValue();
-				if (Answer=="Y"){ GoToYoutube(); }
-				if (Answer=="E"||Answer=="e"){ GoToYoutubeEnglish(); }
+				if (Answer=="Y"||Answer=="y"){ GoToYoutube(); }
+				else if (Answer=="E"||Answer=="e"){ GoToYoutubeEnglish(); }
 				else{
 					document.getElementById("myInput").value='';
 					startGame();
