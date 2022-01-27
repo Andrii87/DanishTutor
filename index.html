@@ -32,8 +32,10 @@
 
 
 	<!--   <script src="mydictionary.js"></script>  -->
-	<script src="./dict.js"></script> 
-	<script type="text/javascript">
+<script src="./dict.js"></script> 
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=NZQrCAXY"></script>
+<script type="text/javascript">
+
 
 
 		var coin = new Audio('./coin.wav');
@@ -47,7 +49,7 @@
 		coin.volume=0.1;
 		coin2.volume=0.2
 		ohNo.volume=0.5;
-		win.volume=0.5;
+		win.volume=0.2;
 
 		var ChapterNr = 2;
 		var DictPage = 1;
@@ -68,6 +70,9 @@
 		
 		var levDone= [false,0,0,0,0,0,0,0,0,0];
 		//var levDone= [false,1,1,2,0,1,0,1,0,0];
+
+		var WordSpoken =false;
+		var WordSpoken2 =false;
 		
 
 		//Start screen
@@ -267,6 +272,8 @@
 
 		}
 		setCurrentWord= function(){
+			WordSpoken =false;
+			WordSpoken2 =false;
 			let ni=0;
 			let currentWordNumber=0;
 			//let currentDictPage=1;
@@ -499,7 +506,7 @@
 				else if (DictPage==2)
 					{window.open( "https://youtu.be/sfin4wzxsBI?t=15");} 
 				else if ((DictPage==3)||(DictPage==4))
-					{window.open( "https://www.youtube.com/watch?v=ACGNuROv4p0&ab_channel=PeterMains");} 
+					{window.open( "https://www.youtube.com/watch?v=ACGNuROv4p0&ab_channel=PeterMains");} //this link is bad
 				else if (DictPage==5)
 					{window.open( "https://youtu.be/HtkHSWG9Ti0?t=15");} 
 				else if (DictPage==6)
@@ -645,7 +652,7 @@
 		  }
 		}
 		//----------------W3school-sound-----------//
-		gameLoop = function(){			
+	gameLoop = function(){			
 			myCanvas.fillRect(0,0,WIDTH,HEIGHT);  //draw black canvas 
 			//myCanvas.clearRect(0,0,WIDTH,HEIGHT);
 			drawRects();
@@ -655,23 +662,34 @@
 			drawWord();
 			
 			drawAnswer();
+			textSpeak();
 			isGameOver();
-		}
+	}
 
 
-		startGame = function(){
+	startGame = function(){
 			setCurrentWord();
 			gameStarted=true;
 			TryAgainScreen=false;
 			score =0;wordY=0;
 			
 			intervalVar = setInterval(gameLoop,1000/framesPerSecond);//30 frames
+	}
+	textSpeak = function(){
+			if ((wordY>50) && (WordSpoken==false))
+			
+			{
+				console.log("inside textSpeak function");
+				
+				responsiveVoice.speak(currentWord, "Danish Female");
+				WordSpoken = true;
 			}
+		}
 		
 		
 
 
-	</script>
+</script>
 
 
 </body>
