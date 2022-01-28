@@ -366,7 +366,7 @@
 					myCanvas.fillText('Perfect score, you won!',100, 250);
 					myCanvas.fillText('Press 1, 2, 3 etc. to change Page of Dictionary', 100, 350);
 					myCanvas.fillText('Current Page:'+DictPage,140, 450);
-					myCanvas.fillText('Press Y/E to wach a cartoon (Dansk/English)', 100, 500);//will fire GoToYoutube function
+					myCanvas.fillText('Press Y/E to wach a cartoon (Dansk/English)', 100, 500); //will fire GoToYoutube function
 					DictPage++;
 					pageChanged=true;
 					myCanvas.restore();
@@ -429,7 +429,7 @@
 					
 					
 
-					myCanvas.fillText('Press Y/E to wach a cartoon', 100, 500);//will fire GoToYoutube function
+					myCanvas.fillText('Press Y/E to wach a cartoon', 100, 500); //will fire GoToYoutube function
 					myCanvas.restore();
 		}
 		
