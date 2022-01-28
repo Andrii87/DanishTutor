@@ -30,7 +30,7 @@ GoToYoutube = function(){
         else if (DictPage==2)
             {window.open( "https://youtu.be/sfin4wzxsBI?t=15");} 
         else if ((DictPage==3)||(DictPage==4))
-            {window.open( "https://www.youtube.com/watch?v=ACGNuROv4p0&ab_channel=PeterMains");} //this link is bad
+            {window.open( "https://youtu.be/U-M335r8Ig8");} //this link is fixed
         else if (DictPage==5)
             {window.open( "https://youtu.be/HtkHSWG9Ti0?t=15");} 
         else if (DictPage==6)
