@@ -196,7 +196,7 @@ dict={
              'småkager':'cookies',   
             'lyd':'sound',
             'mærkelig lyd':'strange sound',   
-            'inde i huset':'inside house',
+            'inde i huset':'inside the house',
             'torden':'thunder',   
             'langt væk':'far away',
             'mørkere':'darker',   
@@ -204,9 +204,10 @@ dict={
             'glemt':'forgotten',   
             'i haven':'in the garden',
             'snart':'soon',   
-            'hvad sag jeg':'what did i say',
+            'Hvad sagde jeg':'what did i say', 
         },
         page2:{
+            //Gurli Gris  George caches cold
             'det sker':'it happens',
             'med':'with',
             'en smule':'a bit',
