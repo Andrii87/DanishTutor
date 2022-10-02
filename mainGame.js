@@ -12,8 +12,12 @@
 	win.volume=0.2;
 
     //Defaults
-	var ChapterNr = 2;
-	var DictPage = 1;
+	//var ChapterNr = 1;
+	//var DictPage = 0;
+	//---1000 words
+	var ChapterNr = 5;
+	var DictPage = 0;
+
 		
 
 	var myCanvas = document.getElementById('myCanvas').getContext('2d');
@@ -28,12 +32,12 @@
 	var maxWordInDict=0;
 	var TryAgainScreen = false; 
 	var easyMode = true;
+	var speakCounter = 0;
 		
 	var levDone= [false,0,0,0,0,0,0,0,0,0];
 	//var levDone= [false,1,1,2,0,1,0,1,0,0];
 
-	var WordSpoken =false;
-	var WordSpoken2 =false;
+	
 		
 
 		//Start screen
@@ -233,8 +237,7 @@
 		}
 
 		setCurrentWord= function(){
-			WordSpoken =false;
-			WordSpoken2 =false;
+			
 			//let ni=0;
 			let currentWordNumber=0;
 			//let currentDictPage=1;
@@ -284,7 +287,7 @@
 			myCanvas.save();
 			myCanvas.fillStyle = "white";
 			myCanvas.font = "30px Calibri";
-			myCanvas.fillText("Word: "+ currentWord, i, wordY);
+			myCanvas.fillText(" "+ currentWord, i, wordY);
 
 			
 			wordY++;//moves word position
@@ -533,13 +536,16 @@
 			intervalVar = setInterval(gameLoop,1000/framesPerSecond);//30 frames
 	}
 	textSpeak = function(){
-			if ((wordY>50) && (WordSpoken==false))
-			
+			if ((wordY>20) && (speakCounter>100))
 			{
+
 				console.log("inside textSpeak function");
 				
 				responsiveVoice.speak(currentWord, "Danish Female");
-				WordSpoken = true;
+			
+				speakCounter=0;
 			}
+			else
+			{speakCounter++;}
 		}
 		
