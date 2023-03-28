@@ -25,6 +25,8 @@ dict={
             
             'det var flot':'it was great',
             'dernede':'down there',
+            'færdig':'done',
+            'er du færdig':'did you finish',
             'skatten':'treasure',
             "kiste":"chest",
             "utroligt":"incredible",
