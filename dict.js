@@ -1,4 +1,4 @@
-dict={
+const dict = {
     chapter1:{
         page0:{
             //https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV
@@ -26,7 +26,7 @@ dict={
             'det var flot':'it was great',
             'dernede':'down there',
             'færdig':'done',
-            'er du færdig':'did you finish',
+            'er du færdig':'are you done',
             'skatten':'treasure',
             "kiste":"chest",
             "utroligt":"incredible",
@@ -542,3 +542,4 @@ dict={
         var Danish9 =["hvem er det?","hvor er du?","hvad","hvorfor","hvordan","hvilken","hvornår","hvor meget?","hvor mange?"];
         var English9 =["who is it?","where are you?","what","why","how"     ,"which","when"     ,"how much?"    ,"how many?"];
 */
+//export default dict ;
