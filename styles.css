@@ -63,7 +63,7 @@
 
 	@media (min-width: 1000px) and (min-height: 900px) {
 		#bodydiv{
-			height: 810px;
+			height: 98vh;
 		}
 		#canvasdiv{
 			position: relative;
