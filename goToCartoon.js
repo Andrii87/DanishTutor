@@ -13,6 +13,8 @@ GoToYoutube = function(){
             if (DictPage==2){window.open( "https://youtu.be/nhb89cifxW8?t=16");} 
             else if (DictPage==3)
                 {window.open( "https://youtu.be/a58Phhm8kuI");} 
+                else if (DictPage==4)
+                {window.open( "https://youtu.be/a58Phhm8kuI");} 
             else if (DictPage==6)
                 {window.open( "https://youtu.be/zgKECHrWpU4");} 
             //if ((ChapterNr==1)&&(DictPage==6))
@@ -73,7 +75,28 @@ GoToYoutubeEnglish = function(){
     {DictPage--;}
     window.alert("Chapter="+ChapterNr+" Page="+DictPage+"   ");
 
-     if (ChapterNr==2)
+    if (ChapterNr==1)
+    {
+        if (DictPage==0)
+            {window.open( "https://youtu.be/RbKPdwBOPF8");} 
+        if(DictPage==1)
+            {window.open( "https://youtu.be/HQOQAcHkWiU?t=15");} 
+        else if (DictPage==2)
+            {window.open( "https://youtu.be/RieCntTdGSQ");}  //eng
+        else if ((DictPage==3)||(DictPage==4))
+            {window.open( "https://youtu.be/TcGRM0SLidQ");} //eng
+        else if (DictPage==5)
+            {window.open( "https://youtu.be/lJnADJxyr54?t=15");} //eng
+        else if (DictPage==6)
+            {window.open( "https://youtu.be/HV86siFCa7o");} //eng
+        else if (DictPage==7)
+            {window.open( "https://youtu.be/HV86siFCa7o");}  //eng
+        else if (DictPage==8)
+            {window.open( "https://youtu.be/yPsywDWFjOg?t=15 ");} //shopping
+        else if (DictPage==9)
+            {window.open( "https://youtu.be/yPsywDWFjOg?t=15 ");} //shopping
+    }
+    if (ChapterNr==2)
     {
         if (DictPage==0)
             {window.open( "https://youtu.be/RbKPdwBOPF8");} 
