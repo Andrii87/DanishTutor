@@ -1,3 +1,6 @@
+	//import  dict  from './dict.js';
+	//console.log(dict);
+
 	var coin = new Audio('./coin.wav');
 	var No = new Audio('./No.wav');
 	var win = new Audio('./winSong.wav');
@@ -16,11 +19,22 @@
 	//var DictPage = 0;
 	//---1000 words
 	var ChapterNr = 1;
-	var DictPage = 2;
+	
+	let DictPage;
+
+	console.log ("localStorage.getItem('dictPage'):"+localStorage.getItem("dictPage"));
+	let localPage = localStorage.getItem("dictPage");
+	if (localPage > 0 ) { 
+		DictPage = localPage; 
+		console.log("loading from local storage");
+	} else { DictPage = 2; console.log("loading defalt page")}
+	
 	var currentWord="";
 
 		
-
+	let wH =window.innerHeight;
+	console.log(wH);
+	document.getElementById('bodydiv').style.height =wH-20;
 	var myCanvas = document.getElementById('myCanvas').getContext('2d');
 		//myCanvas.volume=0;
 
@@ -154,7 +168,9 @@
 		}
 
 		function changePage(page){
+
 			 DictPage=page;
+			 localStorage.setItem("dictPage", DictPage);
 			 console.log('DictPage='+page);
 			 
 
@@ -211,7 +227,7 @@
         }
         wordRight = function(){
         	//word is guessed right
-	           	var soundFlag =true;
+	           	var soundFlag = true;
 	           	if (soundFlag){
 	           		coin2.pause();
 	           		coin2.currentTime=0;
@@ -229,7 +245,7 @@
 	           	console.log("DanNum: "+DanNum);
 	           	wordY=0;
 				   guessedWrong=false;
-				   setCurrentWord();
+				   setCurrentWord(ChapterNr,DictPage);
 	           	//document.getElementById("myInput").value='';
         }
 		
@@ -241,7 +257,7 @@
 
 		}
 
-		setCurrentWord = function(){
+		setCurrentWord = function(ChapterNr,DictPage){
 			
 			console.log('-----setCurrentWord = function');
 			
@@ -249,10 +265,24 @@
 			let chap = "chapter" + ChapterNr;
 			console.log('DictPage='+DictPage);
 			let pg = "page"+ DictPage;
+			console.log('pg='+pg);
 			
-
+			try {
+				if ((dict[chap]) == undefined){console.log("---chapter  does not exist");}
+			  }
+			  catch(err) {
+				console.log(err.message);
+				console.log("chapter  does not exist");
+			  }
+			
+			if ((dict[chap][pg]) == undefined){console.log("chapter or PAGE does not exist");}
 			console.log(`dict[chap][pg] =`);
 			console.log(dict[chap][pg]);
+			
+			
+
+			//console.log(`dict[chap] =`);
+			//console.log(dict[chap]);
 		
 			
 			let currentWordNumber = 0;
@@ -332,7 +362,7 @@
 				else{score=score-2;}
 				document.getElementById("myInput").value='';//clear prompt field
 				ohNo.play();
-				setCurrentWord();
+				setCurrentWord(ChapterNr,DictPage);
 				guessedWrong=false;
 			}
 			myCanvas.restore();
@@ -383,7 +413,8 @@
 
 		youWon = function(){
 					
-				   
+					
+
 					TryAgainScreen=true; 
 					levelStarted=false;
 					myCanvas.save();
@@ -405,6 +436,8 @@
 					myCanvas.fillText('Current Page:'+DictPage,140, 450);
 					myCanvas.fillText('Press Y/E to wach a cartoon (Dansk/English)', 100, 500); //will fire GoToYoutube function
 					DictPage++;
+					localStorage.setItem("dictPage", DictPage); //saving dictPage
+					
 					pageChanged=true;
 					myCanvas.restore();
 					win.play();
@@ -563,7 +596,7 @@
 
 	startLevel = function(){
 		console.log("startLevel = function")
-			setCurrentWord();
+			setCurrentWord(ChapterNr,DictPage);
 			levelStarted=true;
 			TryAgainScreen=false;
 			score =0;wordY=0;
