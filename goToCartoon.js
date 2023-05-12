@@ -80,7 +80,7 @@ GoToYoutubeEnglish = function(){
         if (DictPage==0)
             {window.open( "https://youtu.be/RbKPdwBOPF8");} 
         if(DictPage==1)
-            {window.open( "https://youtu.be/HQOQAcHkWiU?t=15");} 
+            {window.open( "https://youtu.be/8jCvy3nUuC8");} //treasure hunt
         else if (DictPage==2)
             {window.open( "https://youtu.be/RieCntTdGSQ");}  //eng
         else if ((DictPage==3)||(DictPage==4))
