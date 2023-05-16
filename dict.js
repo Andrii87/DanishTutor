@@ -3,8 +3,31 @@ const dict = {
         page0:{
             //https://www.youtube.com/watch?v=T0MwtvJjHfM&t=2s&ab_channel=B%C3%B8rneTV
             //Gurli Gris 1 - 32 Tordenvejret
-             'Jeg hedder':'I am',   
-            '':'',
+            'elve':'11',   
+            'tretten':'13',
+            'tolv':'12',
+            'fjorten':'14',
+            'femten':'15',
+
+            'nul':'0',   
+            'en':'1',   
+            'tre':'3',
+            'to':'2',
+            'fire':'4',
+            'fem':'5',
+            'syv':'7',
+            'seks':'6',
+            'ni':'9',
+            'otte':'8',
+            'ti':'10',
+             
+            'sytten':'17',
+            'seksten':'16',
+            'nitten':'19',
+            'atten':'18',
+            'tyve':'20',
+
+            
            
         },
         page1:{
@@ -513,6 +536,70 @@ const dict = {
             '':'',
 
         },
+    },
+    chapter4:{
+        page1:{'':''}
+    },
+    
+    chapter5:{
+        page1:{
+            
+            'som':'as',
+            'jeg':'I',
+            'hans':"his",
+            'at':'that',
+            'han':'he',
+            'var':'was',
+            'til':'for',
+            'på':'on',
+            'er':'are',
+            'med':'with',
+
+            'de':'they',
+            'være':'be',
+            'på':"at",
+            'an':'one',
+            'har':'have',
+            'dette':'this',
+            'fra':'from',
+            'ved':'by',
+            'hot':'hot',
+            'ord':'word',
+            
+            'men':'word',
+            'hvad':'what',
+            'nogle':'some',
+            'er':'is',
+            'det':'it',
+            'du':'you',
+            'eller':'or',
+            'havde':'had',
+            'den':'the',
+            'af':'of',
+
+            'men':'word',
+            'hvad':'what',
+            'nogle':'some',
+            'er':'is',
+            'det':'it',
+            'du':'you',
+            'eller':'or',
+            'havde':'had',
+            'den':'the',
+            'af':'of',
+
+            'men':'word',
+            'hvad':'what',
+            'nogle':'some',
+            'er':'is',
+            'det':'it',
+            'du':'you',
+            'eller':'or',
+            'havde':'had',
+            'den':'the',
+            'af':'of',
+        }
+
     }
 }
 
