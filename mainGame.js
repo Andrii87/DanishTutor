@@ -1,3 +1,6 @@
+	//import  dict  from './dict.js';
+	//console.log(dict);
+
 	var coin = new Audio('./coin.wav');
 	var No = new Audio('./No.wav');
 	var win = new Audio('./winSong.wav');
@@ -15,11 +18,23 @@
 	//var ChapterNr = 1;
 	//var DictPage = 0;
 	//---1000 words
-	var ChapterNr = 5;
-	var DictPage = 0;
+	var ChapterNr = 1;
+	
+	let DictPage;
+
+	console.log ("localStorage.getItem('dictPage'):"+localStorage.getItem("dictPage"));
+	let localPage = localStorage.getItem("dictPage");
+	if (localPage > 0 ) { 
+		DictPage = localPage; 
+		console.log("loading from local storage");
+	} else { DictPage = 2; console.log("loading defalt page")}
+	
+	var currentWord="";
 
 		
-
+	let wH =window.innerHeight;
+	console.log(wH);
+	document.getElementById('bodydiv').style.height =wH-20;
 	var myCanvas = document.getElementById('myCanvas').getContext('2d');
 		//myCanvas.volume=0;
 
@@ -29,10 +44,13 @@
 	var WIDTH = 600;
 	var HEIGHT = 550;
 	var intervalVar,score;
-	var maxWordInDict=0;
+	var maxWordOnPage=0;
 	var TryAgainScreen = false; 
 	var easyMode = true;
 	var speakCounter = 0;
+
+	// let windowHeight = window.innerHeight;
+	//if (windowHeight < HEIGHT){HEIGHT=windowHeight};
 		
 	var levDone= [false,0,0,0,0,0,0,0,0,0];
 	//var levDone= [false,1,1,2,0,1,0,1,0,0];
@@ -84,6 +102,7 @@
 	var skoreY=30;
 	var wordY=30;
 	var DanNum=0; //arrays start with index 0 
+	
 
 		
 	document.getElementById('myCanvas').onmousedown= function(){
@@ -149,7 +168,9 @@
 		}
 
 		function changePage(page){
+
 			 DictPage=page;
+			 localStorage.setItem("dictPage", DictPage);
 			 console.log('DictPage='+page);
 			 
 
@@ -206,7 +227,7 @@
         }
         wordRight = function(){
         	//word is guessed right
-	           	var soundFlag =true;
+	           	var soundFlag = true;
 	           	if (soundFlag){
 	           		coin2.pause();
 	           		coin2.currentTime=0;
@@ -224,7 +245,7 @@
 	           	console.log("DanNum: "+DanNum);
 	           	wordY=0;
 				   guessedWrong=false;
-				   setCurrentWord();
+				   setCurrentWord(ChapterNr,DictPage);
 	           	//document.getElementById("myInput").value='';
         }
 		
@@ -236,38 +257,79 @@
 
 		}
 
-		setCurrentWord= function(){
+		setCurrentWord = function(ChapterNr,DictPage){
 			
-			//let ni=0;
-			let currentWordNumber=0;
-			//let currentDictPage=1;
-			let currentDictPage=0;
+			console.log('-----setCurrentWord = function');
+			
+			console.log('ChapterNr='+ChapterNr);
+			let chap = "chapter" + ChapterNr;
+			console.log('DictPage='+DictPage);
+			let pg = "page"+ DictPage;
+			console.log('pg='+pg);
+			
+			try {
+				if ((dict[chap]) == undefined){console.log("---chapter  does not exist");}
+			  }
+			  catch(err) {
+				console.log(err.message);
+				console.log("chapter  does not exist");
+			  }
+			
+			if ((dict[chap][pg]) == undefined){console.log("chapter or PAGE does not exist");}
+			console.log(`dict[chap][pg] =`);
+			console.log(dict[chap][pg]);
+			
+			
 
-			let currentDictChapter=1;
-			 maxWordInDict=0;
+			//console.log(`dict[chap] =`);
+			//console.log(dict[chap]);
+		
+			
+			let currentWordNumber = 0;
+	
+			 maxWordOnPage=0;
+
+			 for(let dan in dict[chap][pg] ){
+				//here we iterate an object, and if number of object property is the same as DanNum , we show it
+				if (currentWordNumber == DanNum){
+						currentWord = dan;
+						currentAnswer = dict[chap][pg][dan];
+				}
+					currentWordNumber++;
+					if(currentWordNumber > maxWordOnPage){
+							
+							maxWordOnPage = currentWordNumber;
+					};
+			}
+
+
+			 /*
+			 //Old function to iterate. 
+			 //If we know names of objects inside objects there is no need for this big function
+			 //
 			for (let chapter in dict ){
 				if (currentDictChapter==ChapterNr){
-					//console.log('right chapter');
+					console.log('right chapter');
 				
 				for (let page in dict[chapter]){
-					if (currentDictPage==(DictPage)){
-						//console.log("right chapter!");
+					if (currentDictPage == (DictPage)){
+						console.log("right page!");
 						for(let dan in dict[chapter][page] ){
 							//here we iterate an object, and if number of object property is the same as DanNum , we show it
-							if (currentWordNumber==DanNum){
-									currentWord=dan;
-									currentAnswer=dict[chapter][page][dan];
+							if (currentWordNumber == DanNum){
+									currentWord = dan;
+									currentAnswer = dict[chapter][page][dan];
 									//myCanvas.fillText(currentAnswer, i, wordY+50);//draws answer
 									//i+=150;
 									
 							}
 								currentWordNumber++;
-								if(currentWordNumber>maxWordInDict){
+								if(currentWordNumber > maxWordOnPage){
 										
-										maxWordInDict=currentWordNumber
-										//console.log("maxWordInDict is set to:"+maxWordInDict);
+										maxWordOnPage = currentWordNumber;
+										//console.log("maxWordOnPage is set to:"+maxWordOnPage);
 									};
-					}
+						}
 
 							
 						}else{console.log('Wrong dict page');}
@@ -278,7 +340,9 @@
 						
 					}
 			}else(currentDictChapter++);
-			}
+		}
+		*/
+			console.log('-----setCurrentWord = function END');
 		}
 
 		drawWord = function (){
@@ -298,7 +362,7 @@
 				else{score=score-2;}
 				document.getElementById("myInput").value='';//clear prompt field
 				ohNo.play();
-				setCurrentWord();
+				setCurrentWord(ChapterNr,DictPage);
 				guessedWrong=false;
 			}
 			myCanvas.restore();
@@ -322,8 +386,8 @@
 			
 		}
 		dictLength = function(){
-			//console.log("maxWordInDict:"+maxWordInDict)
-			return maxWordInDict;
+			//console.log("maxWordOnPage:"+maxWordOnPage)
+			return maxWordOnPage;
 
 		}
 
@@ -339,7 +403,7 @@
 		}
 
 		gameReset = function(){
-
+					console.log("gameReset = function");
 					levelStarted=false;
 					score=0;
 					DanNum=0;
@@ -349,7 +413,8 @@
 
 		youWon = function(){
 					
-				   
+					
+
 					TryAgainScreen=true; 
 					levelStarted=false;
 					myCanvas.save();
@@ -371,6 +436,8 @@
 					myCanvas.fillText('Current Page:'+DictPage,140, 450);
 					myCanvas.fillText('Press Y/E to wach a cartoon (Dansk/English)', 100, 500); //will fire GoToYoutube function
 					DictPage++;
+					localStorage.setItem("dictPage", DictPage); //saving dictPage
+					
 					pageChanged=true;
 					myCanvas.restore();
 					win.play();
@@ -528,7 +595,8 @@
 
 
 	startLevel = function(){
-			setCurrentWord();
+		console.log("startLevel = function")
+			setCurrentWord(ChapterNr,DictPage);
 			levelStarted=true;
 			TryAgainScreen=false;
 			score =0;wordY=0;
@@ -536,7 +604,7 @@
 			intervalVar = setInterval(gameLoop,1000/framesPerSecond);//30 frames
 	}
 	textSpeak = function(){
-			if ((wordY>20) && (speakCounter>100))
+			if ((wordY>20) && (speakCounter>150))
 			{
 
 				console.log("inside textSpeak function");

@@ -57,11 +57,11 @@
 	}
 	#myCanvas{
 		border:3px solid black;
-		top: 5px
+		top: 5px;
 		position: relative;
 	}
 
-	@media(min-width: 1000px) {
+	@media (min-width: 1000px) and (min-height: 900px) {
 		#bodydiv{
 			height: 810px;
 		}
